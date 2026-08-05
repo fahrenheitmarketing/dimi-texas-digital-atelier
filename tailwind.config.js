@@ -43,6 +43,13 @@ module.exports = {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
+  			bone: 'hsl(var(--bone))',
+  			espresso: 'hsl(var(--espresso))',
+  			clay: 'hsl(var(--clay))',
+  			lume: 'hsl(var(--lume))',
+  			'brand-blue': 'hsl(var(--brand-blue))',
+  			'brand-blue-light': 'hsl(var(--brand-blue-light))',
+  			'brand-red': 'hsl(var(--brand-red))',
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',
@@ -69,25 +76,23 @@ module.exports = {
   		},
   		keyframes: {
   			'accordion-down': {
-  				from: {
-  					height: '0'
-  				},
-  				to: {
-  					height: 'var(--radix-accordion-content-height)'
-  				}
+  				from: { height: '0' },
+  				to: { height: 'var(--radix-accordion-content-height)' }
   			},
   			'accordion-up': {
-  				from: {
-  					height: 'var(--radix-accordion-content-height)'
-  				},
-  				to: {
-  					height: '0'
-  				}
+  				from: { height: 'var(--radix-accordion-content-height)' },
+  				to: { height: '0' }
   			}
   		},
   		animation: {
-  			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-down': 'accordion-down 0.3s ease-out',
+  			'accordion-up': 'accordion-up 0.3s ease-out'
+  		},
+  		spacing: {
+  			'18': '4.5rem',
+  			'22': '5.5rem',
+  			'30': '7.5rem',
+  			'36': '9rem',
   		}
   	}
   },

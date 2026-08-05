@@ -7,6 +7,14 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
 // Add page imports here
+import Home from '@/pages/Home';
+import AutoInsurance from '@/pages/AutoInsurance';
+import HomeInsurance from '@/pages/HomeInsurance';
+import LifeInsurance from '@/pages/LifeInsurance';
+import CommercialInsurance from '@/pages/CommercialInsurance';
+import OccupationalInsurance from '@/pages/OccupationalInsurance';
+import About from '@/pages/About';
+import Contact from '@/pages/Contact';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -34,8 +42,16 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
-      {/* Add your page Route elements here */}
-      <Route path="*" element={<PageNotFound />} />
+    {/* Add your page Route elements here */}
+    <Route path="/" element={<Home />} />
+    <Route path="/auto-insurance" element={<AutoInsurance />} />
+    <Route path="/home-insurance" element={<HomeInsurance />} />
+    <Route path="/life-insurance" element={<LifeInsurance />} />
+    <Route path="/commercial-insurance" element={<CommercialInsurance />} />
+    <Route path="/occupational-insurance" element={<OccupationalInsurance />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/contact" element={<Contact />} />
+    <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
 };
