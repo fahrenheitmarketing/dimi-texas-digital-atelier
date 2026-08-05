@@ -49,19 +49,19 @@ export default function About() {
       {/* HERO */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden pt-24">
         <div className="absolute inset-0">
-          <Image src={ABOUT_IMG} alt="A trusted insurance partnership" fittingType="fill" className="w-full h-full" />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 to-brand-navy/50"></div>
+          <Image src={ABOUT_IMG} alt="A trusted insurance partnership" fittingType="fill" className="w-full h-full grayscale-[0.8]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
         </div>
         <div className="relative container-luxe py-20">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/20 text-brand-blue-light rounded-full text-xs font-semibold mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue rounded-full text-xs font-semibold mb-6">
               Our Story
             </span>
-            <h1 className="text-4xl md:text-6xl text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl text-brand-navy leading-tight">
               More than policies.<br/>
               <span className="text-brand-red">A partnership.</span>
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed mt-6 max-w-2xl">
+            <p className="text-lg text-muted-foreground leading-relaxed mt-6 max-w-2xl">
               For over a decade, we've been the independent voice Texas families and businesses trust — not because we sell insurance, but because we protect people.
             </p>
           </div>

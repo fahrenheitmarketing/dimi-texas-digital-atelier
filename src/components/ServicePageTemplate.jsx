@@ -28,18 +28,18 @@ export default function ServicePageTemplate({
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-24">
         <div className="absolute inset-0">
-          <Image src={heroImage} alt={heroTitle} fittingType="fill" className="w-full h-full" />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/75 to-brand-navy/40"></div>
+          <Image src={heroImage} alt={heroTitle} fittingType="fill" className="w-full h-full grayscale-[0.8]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
         </div>
         <div className="relative container-luxe py-20">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/20 text-brand-blue-light rounded-full text-xs font-semibold mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue rounded-full text-xs font-semibold mb-6">
               {heroEyebrow}
             </span>
-            <h1 className="text-4xl md:text-6xl text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl text-brand-navy leading-tight">
               {heroTitle} <span className="text-brand-red">{heroTitleAccent}</span>
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed mt-6 max-w-2xl">
+            <p className="text-lg text-muted-foreground leading-relaxed mt-6 max-w-2xl">
               {heroSubtitle}
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-3 mt-8">
@@ -49,7 +49,7 @@ export default function ServicePageTemplate({
               </Link>
               <a
                 href="tel:5122923650"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/40 text-white font-body text-sm font-semibold rounded-lg hover:bg-white/10 transition-all min-h-[48px]"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-brand-blue text-brand-blue font-body text-sm font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-all min-h-[48px]"
               >
                 Call (512) 292-3650
               </a>
