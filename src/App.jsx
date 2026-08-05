@@ -15,6 +15,7 @@ import CommercialInsurance from '@/pages/CommercialInsurance';
 import OccupationalInsurance from '@/pages/OccupationalInsurance';
 import About from '@/pages/About';
 import Contact from '@/pages/Contact';
+import Quote from '@/pages/Quote';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -51,6 +52,7 @@ const AuthenticatedApp = () => {
     <Route path="/occupational-insurance" element={<OccupationalInsurance />} />
     <Route path="/about" element={<About />} />
     <Route path="/contact" element={<Contact />} />
+    <Route path="/quote" element={<Quote />} />
     <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

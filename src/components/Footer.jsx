@@ -36,7 +36,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link to="/about" className="text-sm text-white/70 hover:text-brand-red transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="text-sm text-white/70 hover:text-brand-red transition-colors">Contact</Link></li>
-              <li><a href="https://www.lifeinsurancesimply.com/diversifiedinsurance" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 hover:text-brand-red transition-colors">Get a Quote</a></li>
+              <li><Link to="/quote" className="text-sm text-white/70 hover:text-brand-red transition-colors">Get a Quote</Link></li>
               <li><a href="https://dimitexas.epaypolicy.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-white/70 hover:text-brand-red transition-colors">Make a Payment</a></li>
             </ul>
           </div>

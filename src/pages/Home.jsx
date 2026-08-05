@@ -17,8 +17,6 @@ const COMMERCIAL_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068a
 const ABOUT_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/6191d0c34_generated_951d992b.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
 
-const QUOTE_URL = 'https://www.lifeinsurancesimply.com/diversifiedinsurance';
-
 const insuranceTypes = [
   { key: 'Auto', icon: Car },
   { key: 'Home', icon: HomeIcon },
@@ -125,15 +123,13 @@ export default function Home() {
                   placeholder="ZIP Code"
                   className="flex-1 px-4 py-3 rounded-lg border-2 border-border focus:border-brand-blue focus:outline-none text-foreground placeholder:text-muted-foreground"
                 />
-                <a
-                  href={QUOTE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/quote"
                   className="btn-blue whitespace-nowrap"
                 >
                   Get my price
                   <ArrowRight size={16} />
-                </a>
+                </Link>
               </div>
 
               <div className="text-center mt-4">
@@ -229,10 +225,10 @@ export default function Home() {
               <Phone size={16} />
               File a Claim
             </a>
-            <a href={QUOTE_URL} target="_blank" rel="noopener noreferrer"
+            <Link to="/quote"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/40 text-white font-body text-sm font-semibold rounded-lg hover:bg-white/10 transition-all min-h-[48px]">
               Manage your claim
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -250,10 +246,10 @@ export default function Home() {
               <p className="text-sm text-muted-foreground mb-5">
                 We've made it easy to shop independently and confidently. Start your quote online in just a few minutes.
               </p>
-              <a href={QUOTE_URL} target="_blank" rel="noopener noreferrer" className="btn-blue">
+              <Link to="/quote" className="btn-blue">
                 Get a quote
                 <ArrowRight size={16} />
-              </a>
+              </Link>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-sm border border-border text-left">
               <div className="w-12 h-12 rounded-lg bg-brand-red/10 flex items-center justify-center mb-5">

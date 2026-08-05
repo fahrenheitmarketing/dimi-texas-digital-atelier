@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
 import { Check, ArrowRight } from 'lucide-react';
 import Layout from '@/components/Layout';
@@ -42,15 +43,10 @@ export default function ServicePageTemplate({
               {heroSubtitle}
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-3 mt-8">
-              <a
-                href="https://www.lifeinsurancesimply.com/diversifiedinsurance"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
+              <Link to="/quote" className="btn-primary">
                 Get a Quote
                 <ArrowRight size={16} />
-              </a>
+              </Link>
               <a
                 href="tel:5122923650"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/40 text-white font-body text-sm font-semibold rounded-lg hover:bg-white/10 transition-all min-h-[48px]"

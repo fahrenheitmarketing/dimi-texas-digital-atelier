@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
+const QUOTE_PATH = '/quote';
 import Logo from './Logo';
 
 const navLinks = [
@@ -69,14 +70,9 @@ export default function Navbar() {
               <Phone size={16} />
               <span className="text-sm font-semibold">(512) 292-3650</span>
             </a>
-            <a
-              href="https://www.lifeinsurancesimply.com/diversifiedinsurance"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
+            <Link to={QUOTE_PATH} className="btn-primary">
               Get a Quote
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -135,26 +131,19 @@ export default function Navbar() {
             <Phone size={18} />
             <span className="text-base font-semibold">(512) 292-3650</span>
           </a>
-          <a
-            href="https://www.lifeinsurancesimply.com/diversifiedinsurance"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary w-full max-w-xs"
-          >
+          <Link to={QUOTE_PATH} className="btn-primary w-full max-w-xs">
             Get a Quote
-          </a>
+          </Link>
         </div>
       </div>
 
       {/* Mobile sticky CTA */}
-      <a
-        href="https://www.lifeinsurancesimply.com/diversifiedinsurance"
-        target="_blank"
-        rel="noopener noreferrer"
+      <Link
+        to={QUOTE_PATH}
         className="fixed bottom-5 right-5 z-40 lg:hidden btn-primary shadow-xl"
       >
         Get a Quote
-      </a>
+      </Link>
     </>
   );
 }
