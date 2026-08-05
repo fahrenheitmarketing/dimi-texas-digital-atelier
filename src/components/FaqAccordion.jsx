@@ -1,40 +1,46 @@
 import React, { useState } from 'react';
-import { Plus, Minus } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
-export default function FaqAccordion({ faqs, title = 'Frequently Asked Questions' }) {
-  const [openIndex, setOpenIndex] = useState(0);
+export default function FaqAccordion({ faqs, title }) {
+  const [open, setOpen] = useState(0);
 
   return (
-    <section className="py-22 md:py-30 px-6 md:px-12 bg-card">
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <span className="font-body text-[0.65rem] tracking-[0.4em] uppercase text-clay">Knowledge Center</span>
-          <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-espresso mt-4">{title}</h2>
-          <div className="w-12 h-px bg-brand-red mx-auto mt-8"></div>
+    <section className="py-16 md:py-20 px-6 md:px-12 bg-muted/40">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-10">
+          <span className="text-sm font-semibold text-brand-blue tracking-wide uppercase">FAQ</span>
+          <h2 className="text-3xl md:text-4xl text-brand-navy mt-3">{title}</h2>
         </div>
-
-        <div className="divide-y divide-border">
+        <div className="space-y-3">
           {faqs.map((faq, i) => {
-            const isOpen = openIndex === i;
+            const isOpen = open === i;
             return (
-              <div key={i} className="py-2">
+              <div
+                key={i}
+                className={`bg-white rounded-xl border transition-all duration-200 ${
+                  isOpen ? 'border-brand-blue/40 shadow-md' : 'border-border shadow-sm'
+                }`}
+              >
                 <button
-                  className="flex items-start justify-between w-full text-left py-5 group"
-                  onClick={() => setOpenIndex(isOpen ? -1 : i)}
-                  aria-expanded={isOpen}
+                  onClick={() => setOpen(isOpen ? -1 : i)}
+                  className="flex items-center justify-between w-full text-left p-5"
                 >
-                  <span className={`font-heading text-xl md:text-2xl pr-8 transition-colors duration-300 ${isOpen ? 'text-brand-red' : 'text-espresso group-hover:text-brand-red'}`}>
+                  <span className={`text-base font-bold pr-4 ${isOpen ? 'text-brand-blue' : 'text-brand-navy'}`}>
                     {faq.question}
                   </span>
-                  <span className="flex-shrink-0 mt-1">
-                    {isOpen ? <Minus size={20} className="text-brand-red" /> : <Plus size={20} className="text-clay" />}
-                  </span>
+                  <ChevronDown
+                    size={20}
+                    className={`flex-shrink-0 transition-transform duration-200 ${
+                      isOpen ? 'rotate-180 text-brand-blue' : 'text-muted-foreground'
+                    }`}
+                  />
                 </button>
                 <div
-                  className="overflow-hidden transition-all duration-500 ease-out"
-                  style={{ maxHeight: isOpen ? '600px' : '0', opacity: isOpen ? 1 : 0 }}
+                  className={`overflow-hidden transition-all duration-300 ${
+                    isOpen ? 'max-h-[600px]' : 'max-h-0'
+                  }`}
                 >
-                  <p className="font-body text-base text-muted-foreground leading-relaxed pb-6 pr-12">
+                  <p className="px-5 pb-5 text-sm text-muted-foreground leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

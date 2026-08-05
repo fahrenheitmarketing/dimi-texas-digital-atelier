@@ -38,23 +38,23 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 glass-nav ${
-          scrolled ? 'py-3 shadow-[0_1px_0_0_rgba(163,147,130,0.3)]' : 'py-5'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav ${
+          scrolled ? 'py-2 shadow-md' : 'py-3'
         }`}
       >
         <div className="container-luxe flex items-center justify-between">
-          <Logo className="scale-90 md:scale-100" />
+          <Logo className="scale-[0.6] md:scale-75 origin-left" />
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => {
               const active = location.pathname === link.path;
               return (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`link-underline font-body text-[0.7rem] tracking-[0.2em] uppercase transition-colors duration-300 ${
-                    active ? 'text-brand-red' : 'text-espresso hover:text-brand-red'
+                  className={`link-underline text-sm font-semibold transition-colors duration-200 ${
+                    active ? 'text-brand-red' : 'text-brand-navy hover:text-brand-blue'
                   }`}
                 >
                   {link.label}
@@ -64,10 +64,10 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop CTA + phone */}
-          <div className="hidden lg:flex items-center gap-6">
-            <a href="tel:5122923650" className="flex items-center gap-2 text-espresso hover:text-brand-red transition-colors duration-300">
+          <div className="hidden lg:flex items-center gap-5">
+            <a href="tel:5122923650" className="flex items-center gap-2 text-brand-navy hover:text-brand-blue transition-colors">
               <Phone size={16} />
-              <span className="font-body text-xs tracking-[0.1em]">(512) 292-3650</span>
+              <span className="text-sm font-semibold">(512) 292-3650</span>
             </a>
             <a
               href="https://www.lifeinsurancesimply.com/diversifiedinsurance"
@@ -81,7 +81,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-espresso"
+            className="lg:hidden p-2 text-brand-navy"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >
@@ -92,36 +92,37 @@ export default function Navbar() {
 
       {/* Mobile full-screen overlay */}
       <div
-        className={`fixed inset-0 z-[60] bg-espresso transition-all duration-500 lg:hidden ${
+        className={`fixed inset-0 z-[60] bg-brand-navy transition-all duration-300 lg:hidden ${
           menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
-        <div className="flex items-center justify-between px-6 py-6">
-          <Logo variant="light" className="scale-90" />
+        <div className="flex items-center justify-between px-6 py-4">
+          <div className="bg-white rounded-lg p-1">
+            <Logo className="scale-[0.5] origin-left" />
+          </div>
           <button
-            className="p-2 text-bone"
+            className="p-2 text-white"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
           >
             <X size={26} />
           </button>
         </div>
-        <nav className="flex flex-col items-center justify-center gap-8 mt-16">
+        <nav className="flex flex-col gap-6 mt-8 px-6">
           {navLinks.map((link, i) => {
             const active = location.pathname === link.path;
             return (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`font-heading text-3xl transition-all duration-300 ${
-                  active ? 'text-brand-red' : 'text-bone hover:text-brand-blue-light'
+                className={`text-2xl font-bold transition-colors ${
+                  active ? 'text-brand-red' : 'text-white hover:text-brand-blue-light'
                 }`}
                 style={{
-                  animationDelay: `${i * 60}ms`,
                   opacity: menuOpen ? 1 : 0,
-                  transform: menuOpen ? 'translateY(0)' : 'translateY(20px)',
-                  transition: 'all 0.6s cubic-bezier(0.16,1,0.3,1)',
-                  transitionDelay: `${i * 60}ms`,
+                  transform: menuOpen ? 'translateY(0)' : 'translateY(16px)',
+                  transition: 'all 0.4s ease',
+                  transitionDelay: `${i * 50}ms`,
                 }}
               >
                 {link.label}
@@ -129,10 +130,10 @@ export default function Navbar() {
             );
           })}
         </nav>
-        <div className="flex flex-col items-center gap-6 mt-16 px-6">
-          <a href="tel:5122923650" className="flex items-center gap-3 text-bone">
+        <div className="flex flex-col gap-4 mt-10 px-6">
+          <a href="tel:5122923650" className="flex items-center gap-3 text-white">
             <Phone size={18} />
-            <span className="font-body text-sm tracking-[0.1em]">(512) 292-3650</span>
+            <span className="text-base font-semibold">(512) 292-3650</span>
           </a>
           <a
             href="https://www.lifeinsurancesimply.com/diversifiedinsurance"
@@ -150,7 +151,7 @@ export default function Navbar() {
         href="https://www.lifeinsurancesimply.com/diversifiedinsurance"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-40 lg:hidden bg-espresso text-bone px-6 py-4 font-body text-xs font-medium tracking-[0.2em] uppercase shadow-xl"
+        className="fixed bottom-5 right-5 z-40 lg:hidden btn-primary shadow-xl"
       >
         Get a Quote
       </a>

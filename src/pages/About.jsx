@@ -47,18 +47,21 @@ export default function About() {
   return (
     <Layout breadcrumb="About Us">
       {/* HERO */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[55vh] flex items-center overflow-hidden pt-24">
         <div className="absolute inset-0">
           <Image src={ABOUT_IMG} alt="A trusted insurance partnership" fittingType="fill" className="w-full h-full" />
-          <div className="absolute inset-0 bg-gradient-to-r from-espresso/90 to-espresso/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 to-brand-navy/50"></div>
         </div>
         <div className="relative container-luxe py-20">
           <div className="max-w-3xl">
-            <span className="font-body text-[0.65rem] tracking-[0.4em] uppercase text-brand-blue-light">Our Story</span>
-            <h1 className="font-heading text-5xl md:text-7xl text-bone mt-6 leading-[0.95]">
-              More than policies.<br/><em className="text-brand-red not-italic">A partnership.</em>
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/20 text-brand-blue-light rounded-full text-xs font-semibold mb-6">
+              Our Story
+            </span>
+            <h1 className="text-4xl md:text-6xl text-white leading-tight">
+              More than policies.<br/>
+              <span className="text-brand-red">A partnership.</span>
             </h1>
-            <p className="font-body text-lg md:text-xl text-bone/80 leading-relaxed mt-8 max-w-2xl">
+            <p className="text-lg text-white/80 leading-relaxed mt-6 max-w-2xl">
               For over a decade, we've been the independent voice Texas families and businesses trust — not because we sell insurance, but because we protect people.
             </p>
           </div>
@@ -66,45 +69,45 @@ export default function About() {
       </section>
 
       {/* MISSION */}
-      <section className="py-22 md:py-30 px-6 md:px-12">
+      <section className="py-16 md:py-20 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
-          <span className="font-body text-[0.65rem] tracking-[0.4em] uppercase text-clay">Our Mission</span>
-          <h2 className="font-heading text-4xl md:text-5xl text-espresso mt-4 mb-8">
+          <span className="text-sm font-semibold text-brand-blue tracking-wide uppercase">Our Mission</span>
+          <h2 className="text-3xl md:text-4xl text-brand-navy mt-3 mb-6">
             Protection should feel personal.
           </h2>
-          <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
+          <p className="text-base text-muted-foreground leading-relaxed mb-5">
             Diversified Insurance was founded on a simple conviction: insurance shouldn't feel transactional. It should feel like having someone in your corner — someone who knows your name, understands your risks, and has the carrier relationships to actually do something about them.
           </p>
-          <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
+          <p className="text-base text-muted-foreground leading-relaxed mb-5">
             We live in a world where you can buy insurance from a website in five minutes. But when the storm hits, when the accident happens, when the claim gets complicated — a website can't advocate for you. A call center doesn't know your family. An algorithm doesn't understand that your business is your life's work.
           </p>
-          <p className="font-body text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base text-muted-foreground leading-relaxed">
             That's why we exist. We're not a tech company selling insurance. We're insurance professionals who use technology to serve you better. The difference matters — especially when it matters most.
           </p>
         </div>
       </section>
 
       {/* VALUES */}
-      <section className="py-22 md:py-30 px-6 md:px-12 bg-espresso text-bone relative overflow-hidden">
-        <div className="absolute -right-20 top-0 serif-initial text-[30rem] text-bone/[0.02]">D</div>
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="font-body text-[0.65rem] tracking-[0.4em] uppercase text-brand-blue-light">What We Believe</span>
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl text-bone mt-4">Our values, uncompromised.</h2>
-            <div className="w-12 h-px bg-brand-red mx-auto mt-8"></div>
+      <section className="py-16 md:py-20 px-6 md:px-12 bg-brand-navy">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="text-sm font-semibold text-brand-blue-light tracking-wide uppercase">What We Believe</span>
+            <h2 className="text-3xl md:text-4xl text-white mt-3">Our values, uncompromised.</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Shield, title: 'Advocacy First', body: 'We work for you, not the insurance company. Every recommendation, every claim, every conversation is guided by your best interest.' },
               { icon: Heart, title: 'Relationships', body: 'We know your name, your family, your business. Insurance is personal to us because it\'s personal to you.' },
               { icon: Award, title: 'Excellence', body: 'We hold ourselves to the highest standard — in the carriers we represent, the coverage we recommend, and the service we deliver.' },
               { icon: Users, title: 'Community', body: 'We\'re Texans serving Texans. Our community is your community, and we\'re invested in protecting both.' },
             ].map((v) => (
-              <div key={v.title}>
-                <v.icon className="text-brand-blue-light mb-6" size={32} />
-                <h3 className="font-heading text-2xl text-bone mb-4">{v.title}</h3>
-                <p className="font-body text-sm text-bone/60 leading-relaxed">{v.body}</p>
+              <div key={v.title} className="bg-white/5 rounded-xl p-6 border border-white/10">
+                <div className="w-12 h-12 rounded-lg bg-brand-blue/20 flex items-center justify-center mb-5">
+                  <v.icon className="text-brand-blue-light" size={24} />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-3">{v.title}</h3>
+                <p className="text-sm text-white/60 leading-relaxed">{v.body}</p>
               </div>
             ))}
           </div>
@@ -112,17 +115,17 @@ export default function About() {
       </section>
 
       {/* WHY INDEPENDENT */}
-      <section className="py-22 md:py-30 px-6 md:px-12">
+      <section className="py-16 md:py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
-            <span className="font-body text-[0.65rem] tracking-[0.4em] uppercase text-clay">The Independent Difference</span>
-            <h2 className="font-heading text-4xl md:text-5xl text-espresso mt-4 mb-8">
+            <span className="text-sm font-semibold text-brand-blue tracking-wide uppercase">The Independent Difference</span>
+            <h2 className="text-3xl md:text-4xl text-brand-navy mt-3 mb-6">
               Why independent means better.
             </h2>
-            <p className="font-body text-lg text-muted-foreground leading-relaxed mb-6">
+            <p className="text-base text-muted-foreground leading-relaxed mb-5">
               A "captive" agent works for one insurance company and can only sell that company's products. An independent agent works for you — with access to dozens of top-rated carriers and the freedom to recommend whichever one offers the best coverage and value for your specific situation.
             </p>
-            <p className="font-body text-base text-muted-foreground leading-relaxed mb-8">
+            <p className="text-base text-muted-foreground leading-relaxed mb-8">
               That freedom is your advantage. We compare, we negotiate, and we advocate. If your rates climb without justification, we can move you. If a claim gets complicated, we fight for you. You're never locked in, never limited, never alone.
             </p>
             <div className="space-y-3">
@@ -133,13 +136,15 @@ export default function About() {
                 'Claims advocacy — we\'re with you every step of the way',
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <Check size={18} className="text-brand-red mt-1 flex-shrink-0" />
-                  <span className="font-body text-sm text-espresso">{item}</span>
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-blue flex items-center justify-center mt-0.5">
+                    <Check size={14} className="text-white" />
+                  </div>
+                  <span className="text-foreground">{item}</span>
                 </div>
               ))}
             </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden">
+          <div className="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-lg">
             <Image src={ABOUT_IMG} alt="Diversified Insurance partnership" fittingType="fill" className="w-full h-full" />
           </div>
         </div>
@@ -150,8 +155,8 @@ export default function About() {
 
       {/* CTA */}
       <CtaBanner
-        title="Let\'s start a conversation."
-        subtitle="Whether you\'re shopping for your first policy or reevaluating coverage you\'ve had for years, we\'d love to help. No pressure, no jargon — just honest guidance from people who care."
+        title="Let's start a conversation."
+        subtitle="Whether you're shopping for your first policy or reevaluating coverage you've had for years, we'd love to help. No pressure, no jargon — just honest guidance from people who care."
         image={QUOTE_IMG}
       />
     </Layout>

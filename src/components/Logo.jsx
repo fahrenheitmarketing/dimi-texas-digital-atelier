@@ -10,7 +10,7 @@ export default function Logo({ variant = 'dark', className = '' }) {
       <img
         src="https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/3f3a9f1aa_image.png"
         alt="Diversified Insurance — Home • Auto • Commercial • Life • Health"
-        className="h-20 md:h-24 w-auto object-contain"
+        className="h-20 md:h-24 w-auto object-contain rounded-lg"
       />
     </Link>
   );

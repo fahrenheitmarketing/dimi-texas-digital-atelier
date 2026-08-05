@@ -50,6 +50,7 @@ module.exports = {
   			'brand-blue': 'hsl(var(--brand-blue))',
   			'brand-blue-light': 'hsl(var(--brand-blue-light))',
   			'brand-red': 'hsl(var(--brand-red))',
+  			'brand-navy': 'hsl(var(--brand-navy))',
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',
