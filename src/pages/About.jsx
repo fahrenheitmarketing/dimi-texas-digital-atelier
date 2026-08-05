@@ -49,7 +49,7 @@ export default function About() {
       {/* HERO */}
       <section className="relative min-h-[55vh] flex items-center overflow-hidden pt-24">
         <div className="absolute inset-0">
-          <Image src={ABOUT_IMG} alt="A trusted insurance partnership" fittingType="fill" className="w-full h-full grayscale-[0.8]" />
+          <Image src={ABOUT_IMG} alt="A trusted insurance partnership" fittingType="fill" className="w-full h-full grayscale-[0.8] opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
         </div>
         <div className="relative container-luxe py-20">

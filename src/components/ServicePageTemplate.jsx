@@ -28,7 +28,7 @@ export default function ServicePageTemplate({
       {/* HERO */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-24">
         <div className="absolute inset-0">
-          <Image src={heroImage} alt={heroTitle} fittingType="fill" className="w-full h-full grayscale-[0.8]" />
+          <Image src={heroImage} alt={heroTitle} fittingType="fill" className="w-full h-full grayscale-[0.8] opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
         </div>
         <div className="relative container-luxe py-20">
