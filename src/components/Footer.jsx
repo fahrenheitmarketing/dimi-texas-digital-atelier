@@ -12,7 +12,7 @@ export default function Footer() {
         style={{
           backgroundImage: "url('https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/e39575d76_generated_image.png')",
           backgroundRepeat: 'repeat',
-          backgroundSize: '40px',
+          backgroundSize: '30px',
           opacity: 0.2,
           WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)',
           maskImage: 'linear-gradient(to bottom, transparent, black)',
