@@ -77,6 +77,7 @@ export default function AutoInsurance() {
       ctaTitle="Ready to find your best auto rate?"
       ctaSubtitle="One conversation, multiple carriers. Let us shop the market and show you what better auto coverage looks like — at a price that respects your budget."
       ctaImage={QUOTE_IMG}
+      serviceKey="auto"
     />
   );
 }

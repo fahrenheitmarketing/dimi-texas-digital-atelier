@@ -85,6 +85,7 @@ export default function CommercialInsurance() {
       ctaTitle="Is your business properly protected?"
       ctaSubtitle="Let us assess your risks and shop the market for the right coverage. A stronger protection program may cost less than you think — and it's worth everything when you need it."
       ctaImage={QUOTE_IMG}
+      serviceKey="commercial"
     />
   );
 }

@@ -85,6 +85,7 @@ export default function LifeInsurance() {
       ctaTitle="Protect the people who depend on you."
       ctaSubtitle="The best time to buy life insurance was yesterday. The second-best time is today. Let us find the right coverage at the right price — before you need it."
       ctaImage={QUOTE_IMG}
+      serviceKey="life"
     />
   );
 }

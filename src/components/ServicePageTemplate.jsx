@@ -22,6 +22,7 @@ export default function ServicePageTemplate({
   ctaTitle,
   ctaSubtitle,
   ctaImage,
+  serviceKey,
 }) {
   return (
     <Layout>
@@ -50,7 +51,7 @@ export default function ServicePageTemplate({
               {heroSubtitle}
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-3 mt-8">
-                  <Link to="/quote" className="btn-primary">
+                  <Link to={`/quote${serviceKey ? `?service=${serviceKey}` : ''}`} className="btn-primary">
                     Get a Quote
                     <ArrowRight size={16} />
                   </Link>
@@ -124,7 +125,7 @@ export default function ServicePageTemplate({
       <FaqAccordion faqs={faqs} title={faqTitle} />
 
       {/* CTA */}
-      <CtaBanner title={ctaTitle} subtitle={ctaSubtitle} image={ctaImage} />
+      <CtaBanner title={ctaTitle} subtitle={ctaSubtitle} image={ctaImage} serviceKey={serviceKey} />
     </Layout>
   );
 }

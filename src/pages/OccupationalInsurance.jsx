@@ -85,6 +85,7 @@ export default function OccupationalInsurance() {
       ctaTitle="Could your business save 10–50% on workplace injury coverage?"
       ctaSubtitle="There's only one way to find out. Let us run a free, no-obligation comparison of your current workers' comp premium versus occupational accident coverage. The numbers may surprise you."
       ctaImage={QUOTE_IMG}
+      serviceKey="occupational"
     />
   );
 }

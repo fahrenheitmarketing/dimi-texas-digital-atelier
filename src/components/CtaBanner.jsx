@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Phone } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 
-export default function CtaBanner({ title, subtitle, image }) {
+export default function CtaBanner({ title, subtitle, image, serviceKey }) {
   return (
     <section className="relative py-20 md:py-24 px-6 md:px-12 overflow-hidden">
       {image && (
@@ -21,7 +21,7 @@ export default function CtaBanner({ title, subtitle, image }) {
           {subtitle}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-          <Link to="/quote" className="btn-primary">
+          <Link to={`/quote${serviceKey ? `?service=${serviceKey}` : ''}`} className="btn-primary">
             Get Your Quote
             <ArrowRight size={16} />
           </Link>

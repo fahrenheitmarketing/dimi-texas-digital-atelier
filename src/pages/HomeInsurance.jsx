@@ -85,6 +85,7 @@ export default function HomeInsurance() {
       ctaTitle="Is your home truly protected?"
       ctaSubtitle="Let us review your current coverage and shop the market. You may be surprised what better protection looks like — often for less than you're paying now."
       ctaImage={QUOTE_IMG}
+      serviceKey="home"
     />
   );
 }

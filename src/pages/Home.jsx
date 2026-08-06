@@ -124,7 +124,7 @@ export default function Home() {
                   className="flex-1 px-4 py-3 rounded-lg border-2 border-border focus:border-brand-blue focus:outline-none text-foreground placeholder:text-muted-foreground"
                 />
                 <Link
-                  to="/quote"
+                  to={`/quote?service=${selected.toLowerCase()}`}
                   className="btn-blue whitespace-nowrap"
                 >
                   Get my price
