@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Phone, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Phone, MapPin, Clock, ArrowRight, ChevronRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 export default function Contact() {
@@ -19,12 +20,19 @@ export default function Contact() {
   const labelClass = 'block text-sm font-semibold text-brand-navy mb-2';
 
   return (
-    <Layout breadcrumb="Contact">
+    <Layout>
       {/* HERO */}
-      <section className="relative min-h-[45vh] flex items-center overflow-hidden pt-24">
+      <section className="relative min-h-[68vh] flex flex-col overflow-hidden">
         <div className="absolute inset-0 bg-brand-navy"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-brand-navy to-brand-blue/40"></div>
-        <div className="relative container-luxe py-20">
+        <div className="relative container-luxe w-full pt-28 md:pt-32 z-10">
+          <div className="flex items-center gap-2 font-body text-xs tracking-[0.15em] uppercase text-white/60">
+            <Link to="/" className="hover:text-brand-red transition-colors">Home</Link>
+            <ChevronRight size={12} className="text-white/40" />
+            <span className="text-white">Contact</span>
+          </div>
+        </div>
+        <div className="relative container-luxe w-full flex-1 flex items-center pb-16 md:pb-20 z-10">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/20 text-brand-blue-light rounded-full text-xs font-semibold mb-6">
               Get In Touch
