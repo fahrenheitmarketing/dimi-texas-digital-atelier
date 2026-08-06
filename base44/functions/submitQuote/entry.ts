@@ -65,6 +65,7 @@ export default async function(req) {
       answerRow("Phone", contact.phone),
       answerRow("Preferred Contact", contact.preferredContact),
       answerRow("Best Time to Reach", contact.bestTime),
+      answerRow("Referral Source", contact.referralSource),
       ...answers.map((a) => answerRow(a.label, a.value)),
     ];
     if (notes) rows.push(answerRow("Additional Notes", notes));

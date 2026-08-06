@@ -17,6 +17,20 @@ export const CONTACT_FIELDS = [
     type: "select",
     options: ["Morning", "Afternoon", "Evening", "Anytime"],
   },
+  {
+    name: "referralSource",
+    label: "How did you hear about us?",
+    type: "select",
+    required: true,
+    options: [
+      "Friend or family referral",
+      "Existing client referral",
+      "Google or online search",
+      "Social media",
+      "Community or local event",
+      "Other",
+    ],
+  },
 ];
 
 // Per-service questionnaire definitions. Each service has a set of sections,
