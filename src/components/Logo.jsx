@@ -9,8 +9,8 @@ export default function Logo({ variant = 'dark', className = '' }) {
   return (
     <Link to="/" className={`inline-block leading-none ${className}`} aria-label="Diversified Insurance — Home">
       <img
-        src="https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/3f3a9f1aa_image.png"
-        alt="Diversified Insurance — Home • Auto • Commercial • Life • Health"
+        src="https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/50d0ee177_diversified_insurance_logo.svg"
+        alt="Diversified Insurance — Home • Auto • Commercial • Life • Occupational"
         className={`h-20 md:h-24 w-auto object-contain ${isLight ? '' : 'rounded-lg'}`}
         style={isLight ? { filter: 'brightness(0) invert(1)' } : undefined}
       />
