@@ -66,7 +66,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Diversified Insurance (DIMI Texas). All Rights Reserved.
           </p>
           <p className="text-xs text-white/40">
-            Home • Auto • Commercial • Life • Health
+            Home • Auto • Commercial • Life • Occupational
           </p>
         </div>
       </div>
