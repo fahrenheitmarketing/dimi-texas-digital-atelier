@@ -6,19 +6,6 @@ import Logo from './Logo';
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-espresso text-white pt-16 pb-8 px-6 md:px-12">
-      <img
-        src="https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/e39575d76_generated_image.png"
-        alt=""
-        aria-hidden="true"
-        className="absolute pointer-events-none select-none"
-        style={{
-          right: '-70px',
-          bottom: '-70px',
-          width: '360px',
-          height: '360px',
-          opacity: 0.15,
-        }}
-      />
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
