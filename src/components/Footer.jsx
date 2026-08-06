@@ -5,8 +5,23 @@ import Logo from './Logo';
 
 export default function Footer() {
   return (
-    <footer className="bg-espresso text-white pt-16 pb-8 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto">
+    <footer className="relative overflow-hidden bg-espresso text-white pt-16 pb-8 px-6 md:px-12">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url(https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/3f3a9f1aa_image.png)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '140px',
+          filter: 'brightness(0) invert(1)',
+          opacity: 0.2,
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)',
+          maskImage: 'linear-gradient(to bottom, transparent, black)',
+          WebkitMaskSize: '100% 100%',
+          maskSize: '100% 100%',
+        }}
+      />
+      <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
