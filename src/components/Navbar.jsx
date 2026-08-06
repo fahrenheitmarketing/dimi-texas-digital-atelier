@@ -44,7 +44,7 @@ export default function Navbar() {
         }`}
       >
         <div className="container-luxe flex items-center justify-between">
-          <Logo className="scale-[0.6] md:scale-75 origin-left" />
+          <Logo className="scale-[0.9] md:scale-[1.125] origin-left" />
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-7">
@@ -94,7 +94,7 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between px-6 py-4">
           <div className="bg-white rounded-lg p-1">
-            <Logo className="scale-[0.5] origin-left" />
+            <Logo className="scale-[0.75] origin-left" />
           </div>
           <button
             className="p-2 text-white"
