@@ -2,7 +2,7 @@ import React from 'react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 import AnnuitiesIncomeCalculator from '@/components/calculators/AnnuitiesIncomeCalculator';
 
-const ANNUITIES_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/b8a444f91_generated_eb127168.png';
+const ANNUITIES_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/f4530733d_generated_image.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
 const CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/9b8d9c62e_generated_image.png';
 
