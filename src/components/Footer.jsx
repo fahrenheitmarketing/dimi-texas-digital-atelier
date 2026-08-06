@@ -10,9 +10,9 @@ export default function Footer() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Cpath%20d='M50%200L93.3%2025L93.3%2075L50%20100L6.7%2075L6.7%2025Z'%20fill='white'/%3E%3C/svg%3E")`,
+          backgroundImage: "url('https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/e39575d76_generated_image.png')",
           backgroundRepeat: 'repeat',
-          backgroundSize: '34px',
+          backgroundSize: '40px',
           opacity: 0.2,
           WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)',
           maskImage: 'linear-gradient(to bottom, transparent, black)',
