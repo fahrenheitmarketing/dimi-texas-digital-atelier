@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Car, Home as HomeIcon, HeartHandshake, Building2, HardHat, ArrowRight } from 'lucide-react';
+import { Car, Home as HomeIcon, HeartHandshake, Building2, HardHat, HeartPulse, PiggyBank, ArrowRight } from 'lucide-react';
 import QuoteForm from './QuoteForm';
 import { QUOTE_SERVICES, getServiceByKey } from '@/data/quoteForms';
 
@@ -10,6 +10,8 @@ const ICONS = {
   life: HeartHandshake,
   commercial: Building2,
   occupational: HardHat,
+  ltc: HeartPulse,
+  annuities: PiggyBank,
 };
 
 export default function QuoteWizard() {
