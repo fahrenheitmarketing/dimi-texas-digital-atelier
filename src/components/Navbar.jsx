@@ -5,7 +5,6 @@ const QUOTE_PATH = '/quote';
 import Logo from './Logo';
 
 const navLinks = [
-  { label: 'Home', path: '/' },
   { label: 'Auto', path: '/auto-insurance' },
   { label: 'Home', path: '/home-insurance' },
   { label: 'Life', path: '/life-insurance' },
