@@ -9,6 +9,7 @@ import { Image } from '@/components/ui/image';
 import Layout from '@/components/Layout';
 import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
+import AnimatedStat from '@/components/AnimatedStat';
 
 const HERO_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/cd15e64b2_generated_0dbfa99c.png';
 const AUTO_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/be6b9a1bd_generated_b48b15e1.png';
@@ -166,7 +167,7 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-lg bg-brand-blue/10 flex items-center justify-center mb-5">
                   <item.icon className="text-brand-blue" size={24} />
                 </div>
-                <p className="text-4xl font-extrabold text-brand-blue mb-2">{item.stat}</p>
+                <AnimatedStat value={item.stat} className="text-4xl font-extrabold text-brand-blue mb-2" />
                 <h3 className="text-lg font-bold text-brand-navy mb-3">{item.label}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
               </div>
