@@ -1,7 +1,7 @@
 import React from 'react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
-const LTC_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/cd15e64b2_generated_0dbfa99c.png';
+const LTC_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/43ad7d3e7_generated_image.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
 const CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/9be10ea3c_generated_image.png';
 
