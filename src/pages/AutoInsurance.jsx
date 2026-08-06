@@ -2,7 +2,7 @@ import React from 'react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 const AUTO_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/be6b9a1bd_generated_b48b15e1.png';
-const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
+const CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/87c2cd182_generated_image.png';
 
 const faqs = [
   {
@@ -76,7 +76,7 @@ export default function AutoInsurance() {
       faqTitle="Auto Insurance Questions, Answered"
       ctaTitle="Ready to find your best auto rate?"
       ctaSubtitle="One conversation, multiple carriers. Let us shop the market and show you what better auto coverage looks like — at a price that respects your budget."
-      ctaImage={QUOTE_IMG}
+      ctaImage={CTA_IMG}
       serviceKey="auto"
     />
   );
