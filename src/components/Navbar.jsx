@@ -39,8 +39,8 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav ${
-          scrolled ? 'py-2 shadow-md' : 'py-3'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          scrolled ? 'glass-nav py-2 shadow-md' : 'bg-transparent py-3'
         }`}
       >
         <div className="container-luxe flex items-center justify-between">

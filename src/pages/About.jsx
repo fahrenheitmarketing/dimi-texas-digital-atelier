@@ -1,5 +1,6 @@
 import React from 'react';
-import { Shield, Heart, Award, Users, ArrowRight, Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Shield, Heart, Award, Users, ArrowRight, Check, ChevronRight } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import Layout from '@/components/Layout';
 import FaqAccordion from '@/components/FaqAccordion';
@@ -45,14 +46,21 @@ const faqs = [
 
 export default function About() {
   return (
-    <Layout breadcrumb="About Us">
+    <Layout>
       {/* HERO */}
-      <section className="relative min-h-[55vh] flex items-center overflow-hidden pt-24">
+      <section className="relative min-h-[78vh] flex flex-col overflow-hidden">
         <div className="absolute inset-0">
           <Image src={ABOUT_IMG} alt="A trusted insurance partnership" fittingType="fill" className="w-full h-full grayscale-[0.8] opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
         </div>
-        <div className="relative container-luxe py-20">
+        <div className="relative container-luxe w-full pt-28 md:pt-32 z-10">
+          <div className="flex items-center gap-2 font-body text-xs tracking-[0.15em] uppercase text-muted-foreground">
+            <Link to="/" className="hover:text-brand-red transition-colors">Home</Link>
+            <ChevronRight size={12} className="text-clay" />
+            <span className="text-espresso">About Us</span>
+          </div>
+        </div>
+        <div className="relative container-luxe w-full flex-1 flex items-center pb-16 md:pb-20 z-10">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue rounded-full text-xs font-semibold mb-6">
               Our Story

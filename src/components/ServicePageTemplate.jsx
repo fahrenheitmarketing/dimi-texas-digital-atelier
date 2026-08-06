@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, ChevronRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
@@ -24,14 +24,21 @@ export default function ServicePageTemplate({
   ctaImage,
 }) {
   return (
-    <Layout breadcrumb={breadcrumb}>
+    <Layout>
       {/* HERO */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden pt-24">
+      <section className="relative min-h-[78vh] flex flex-col overflow-hidden">
         <div className="absolute inset-0">
           <Image src={heroImage} alt={heroTitle} fittingType="fill" className="w-full h-full grayscale-[0.8] opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
         </div>
-        <div className="relative container-luxe py-20">
+        <div className="relative container-luxe w-full pt-28 md:pt-32 z-10">
+          <div className="flex items-center gap-2 font-body text-xs tracking-[0.15em] uppercase text-muted-foreground">
+            <Link to="/" className="hover:text-brand-red transition-colors">Home</Link>
+            <ChevronRight size={12} className="text-clay" />
+            <span className="text-espresso">{breadcrumb}</span>
+          </div>
+        </div>
+        <div className="relative container-luxe w-full flex-1 flex items-center pb-16 md:pb-20 z-10">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue rounded-full text-xs font-semibold mb-6">
               {heroEyebrow}
@@ -43,20 +50,20 @@ export default function ServicePageTemplate({
               {heroSubtitle}
             </p>
             <div className="flex flex-col sm:flex-row items-start gap-3 mt-8">
-              <Link to="/quote" className="btn-primary">
-                Get a Quote
-                <ArrowRight size={16} />
-              </Link>
-              <a
-                href="tel:5122923650"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-brand-blue text-brand-blue font-body text-sm font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-all min-h-[48px]"
-              >
-                Call (512) 292-3650
-              </a>
+                  <Link to="/quote" className="btn-primary">
+                    Get a Quote
+                    <ArrowRight size={16} />
+                  </Link>
+                  <a
+                    href="tel:5122923650"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-brand-blue text-brand-blue font-body text-sm font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-all min-h-[48px]"
+                  >
+                    Call (512) 292-3650
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+            </section>
 
       {/* INTRO */}
       <section className="py-16 md:py-20 px-6 md:px-12">
