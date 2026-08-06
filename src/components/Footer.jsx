@@ -6,18 +6,17 @@ import Logo from './Logo';
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden bg-espresso text-white pt-16 pb-8 px-6 md:px-12">
-      <div
+      <img
+        src="https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/e39575d76_generated_image.png"
+        alt=""
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
+        className="absolute pointer-events-none select-none"
         style={{
-          backgroundImage: "url('https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/e39575d76_generated_image.png')",
-          backgroundRepeat: 'repeat',
-          backgroundSize: '30px',
-          opacity: 0.2,
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)',
-          maskImage: 'linear-gradient(to bottom, transparent, black)',
-          WebkitMaskSize: '100% 100%',
-          maskSize: '100% 100%',
+          right: '-70px',
+          bottom: '-70px',
+          width: '360px',
+          height: '360px',
+          opacity: 0.15,
         }}
       />
       <div className="relative z-10 max-w-7xl mx-auto">
