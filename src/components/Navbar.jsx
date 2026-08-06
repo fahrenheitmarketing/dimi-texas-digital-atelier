@@ -13,6 +13,7 @@ const navLinks = [
   { label: 'LTC', path: '/long-term-care' },
   { label: 'Annuities', path: '/annuities' },
   { label: 'About', path: '/about' },
+  { label: 'Carriers', path: '/carriers' },
   { label: 'Contact', path: '/contact' },
 ];
 

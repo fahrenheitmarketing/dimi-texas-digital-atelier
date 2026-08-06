@@ -17,6 +17,7 @@ import LongTermCare from '@/pages/LongTermCare';
 import Annuities from '@/pages/Annuities';
 import About from '@/pages/About';
 import Contact from '@/pages/Contact';
+import Carriers from '@/pages/Carriers';
 import Quote from '@/pages/Quote';
 
 const AuthenticatedApp = () => {
@@ -56,6 +57,7 @@ const AuthenticatedApp = () => {
     <Route path="/annuities" element={<Annuities />} />
     <Route path="/about" element={<About />} />
     <Route path="/contact" element={<Contact />} />
+    <Route path="/carriers" element={<Carriers />} />
     <Route path="/quote" element={<Quote />} />
     <Route path="*" element={<PageNotFound />} />
     </Routes>
