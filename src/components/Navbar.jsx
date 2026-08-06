@@ -19,11 +19,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-  const isDarkHero = location.pathname === '/contact';
-  const overHero = !scrolled && isDarkHero;
-  const linkColor = overHero ? 'text-white/90 hover:text-white' : 'text-brand-navy hover:text-brand-blue';
-  const phoneColor = overHero ? 'text-white/90 hover:text-white' : 'text-brand-navy hover:text-brand-blue';
-  const iconColor = overHero ? 'text-white' : 'text-brand-navy';
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -60,7 +55,7 @@ export default function Navbar() {
                   key={link.path}
                   to={link.path}
                   className={`link-underline text-sm font-semibold transition-colors duration-200 ${
-                    active ? 'text-brand-red' : linkColor
+                    active ? 'text-brand-red' : 'text-brand-navy hover:text-brand-blue'
                   }`}
                 >
                   {link.label}
@@ -71,7 +66,7 @@ export default function Navbar() {
 
           {/* Desktop CTA + phone */}
           <div className="hidden lg:flex items-center gap-5">
-            <a href="tel:5122923650" className={`flex items-center gap-2 ${phoneColor} transition-colors`}>
+            <a href="tel:5122923650" className="flex items-center gap-2 text-brand-navy hover:text-brand-blue transition-colors">
               <Phone size={16} />
               <span className="text-sm font-semibold">(512) 292-3650</span>
             </a>
@@ -82,7 +77,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className={`lg:hidden p-2 ${iconColor}`}
+            className="lg:hidden p-2 text-brand-navy"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, MapPin, Clock, ArrowRight, ChevronRight } from 'lucide-react';
+import { Image } from '@/components/ui/image';
 import Layout from '@/components/Layout';
+
+const CONTACT_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/fc13724b2_generated_image.png';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -22,25 +25,27 @@ export default function Contact() {
   return (
     <Layout>
       {/* HERO */}
-      <section className="relative min-h-[68vh] flex flex-col overflow-hidden">
-        <div className="absolute inset-0 bg-brand-navy"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-navy via-brand-navy to-brand-blue/40"></div>
+      <section className="relative min-h-[78vh] flex flex-col overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src={CONTACT_IMG} alt="Let's talk protection" fittingType="fill" className="w-full h-full grayscale-[0.8] opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+        </div>
         <div className="relative container-luxe w-full pt-28 md:pt-32 z-10">
-          <div className="flex items-center gap-2 font-body text-xs tracking-[0.15em] uppercase text-white/60">
+          <div className="flex items-center gap-2 font-body text-xs tracking-[0.15em] uppercase text-muted-foreground">
             <Link to="/" className="hover:text-brand-red transition-colors">Home</Link>
-            <ChevronRight size={12} className="text-white/40" />
-            <span className="text-white">Contact</span>
+            <ChevronRight size={12} className="text-clay" />
+            <span className="text-espresso">Contact</span>
           </div>
         </div>
         <div className="relative container-luxe w-full flex-1 flex items-center pb-16 md:pb-20 z-10">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/20 text-brand-blue-light rounded-full text-xs font-semibold mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue rounded-full text-xs font-semibold mb-6">
               Get In Touch
             </span>
-            <h1 className="text-4xl md:text-6xl text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl text-brand-navy leading-tight">
               Let's talk <span className="text-brand-red">protection.</span>
             </h1>
-            <p className="text-lg text-white/80 leading-relaxed mt-6 max-w-2xl">
+            <p className="text-lg text-muted-foreground leading-relaxed mt-6 max-w-2xl">
               Questions about coverage? Ready for a quote? Need to file a claim? We're here — with real people, real answers, and real solutions.
             </p>
           </div>
