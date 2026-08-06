@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Logo variant="light" className="scale-[0.825] origin-top-left mb-5" />
+            <Logo variant="light" className="scale-[1.1] origin-top-left mb-5" />
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
               An independent insurance agency serving Texas families and businesses with tailored protection since 2012.
             </p>
