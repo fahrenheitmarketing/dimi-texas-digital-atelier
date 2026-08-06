@@ -13,6 +13,8 @@ import HomeInsurance from '@/pages/HomeInsurance';
 import LifeInsurance from '@/pages/LifeInsurance';
 import CommercialInsurance from '@/pages/CommercialInsurance';
 import OccupationalInsurance from '@/pages/OccupationalInsurance';
+import LongTermCare from '@/pages/LongTermCare';
+import Annuities from '@/pages/Annuities';
 import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import Quote from '@/pages/Quote';
@@ -50,6 +52,8 @@ const AuthenticatedApp = () => {
     <Route path="/life-insurance" element={<LifeInsurance />} />
     <Route path="/commercial-insurance" element={<CommercialInsurance />} />
     <Route path="/occupational-insurance" element={<OccupationalInsurance />} />
+    <Route path="/long-term-care" element={<LongTermCare />} />
+    <Route path="/annuities" element={<Annuities />} />
     <Route path="/about" element={<About />} />
     <Route path="/contact" element={<Contact />} />
     <Route path="/quote" element={<Quote />} />

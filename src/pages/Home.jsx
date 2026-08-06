@@ -31,6 +31,8 @@ const products = [
   { num: 3, title: 'Life Insurance', desc: 'Secure your family\'s financial future with term, whole, and universal life policies built around your goals.', path: '/life-insurance', image: LIFE_IMG },
   { num: 4, title: 'Commercial Insurance', desc: 'Comprehensive business protection — from general liability to commercial auto — tailored to your operation.', path: '/commercial-insurance', image: COMMERCIAL_IMG },
   { num: 5, title: 'Occupational Insurance', desc: 'A smart alternative to traditional workers\' comp — often 10–50% less, with broader flexibility for employers.', path: '/occupational-insurance', image: COMMERCIAL_IMG },
+  { num: 6, title: 'Long-Term Care Insurance', desc: 'Protect your savings and your independence — coverage for the rising cost of care at home, assisted living, or a skilled facility.', path: '/long-term-care', image: LIFE_IMG },
+  { num: 7, title: 'Annuities', desc: 'Turn your savings into guaranteed income you can\'t outlive — with principal protection and today\'s top MYGA rates.', path: '/annuities', image: QUOTE_IMG },
 ];
 
 const homeFaqs = [

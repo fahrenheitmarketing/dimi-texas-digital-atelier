@@ -183,6 +183,70 @@ export const QUOTE_SERVICES = [
       },
     ],
   },
+  {
+    key: "ltc",
+    label: "Long-Term Care Insurance",
+    blurb: "A few questions about your health and care preferences to design the right LTC coverage.",
+    sections: [
+      {
+        title: "About You",
+        fields: [
+          { name: "dateOfBirth", label: "Date of birth", type: "date", required: true },
+          { name: "gender", label: "Gender", type: "select", options: ["Female", "Male", "Other / prefer not to say"] },
+          { name: "maritalStatus", label: "Marital status", type: "select", options: ["Single", "Married", "Partnered", "Widowed", "Divorced"] },
+          { name: "livingArrangement", label: "Living arrangement", type: "select", options: ["Live alone", "Live with spouse / partner", "Live with family", "Assisted living / facility"] },
+          { name: "healthStatus", label: "Overall health (self-assessment)", type: "select", options: ["Excellent", "Good", "Fair", "Poor"] },
+        ],
+      },
+      {
+        title: "Care Preferences",
+        fields: [
+          { name: "targetCareSetting", label: "Where would you prefer to receive care?", type: "select", options: ["At home", "Assisted living", "Nursing / skilled facility", "Not sure"] },
+          { name: "benefitPeriod", label: "Desired benefit period", type: "select", options: ["2 years", "3 years", "5 years", "Lifetime", "Not sure"] },
+          { name: "dailyBenefit", label: "Desired daily benefit amount", type: "select", options: ["$100 / day", "$150 / day", "$200 / day", "$250 / day", "Not sure"] },
+          { name: "inflationProtection", label: "Include inflation protection?", type: "radio", options: ["Yes", "No", "Not sure"] },
+          { name: "currentLTC", label: "Do you currently have LTC coverage?", type: "radio", options: ["No", "Yes"] },
+        ],
+      },
+      {
+        title: "Assets & Goals",
+        fields: [
+          { name: "estimatedSavings", label: "Estimated retirement savings ($)", type: "number", placeholder: "250000" },
+          { name: "planningStage", label: "Where are you in planning?", type: "select", options: ["Just exploring", "Planning ahead", "Urgent / near-term need"] },
+        ],
+      },
+    ],
+  },
+  {
+    key: "annuities",
+    label: "Annuities",
+    blurb: "Tell us about your goals and savings to explore guaranteed income and accumulation options.",
+    sections: [
+      {
+        title: "About You",
+        fields: [
+          { name: "dateOfBirth", label: "Date of birth", type: "date", required: true },
+          { name: "retirementStatus", label: "Retirement timeline", type: "select", options: ["Retired", "Within 5 years", "Within 10 years", "Within 15+ years", "Working / not yet planning"] },
+        ],
+      },
+      {
+        title: "Goals",
+        fields: [
+          { name: "annuityType", label: "Type of annuity you're considering", type: "select", options: ["Multi-Year Guaranteed Annuity (MYGA)", "Fixed indexed annuity", "Single premium immediate annuity", "Lifetime income annuity", "Not sure — help me choose"] },
+          { name: "premiumAmount", label: "Estimated premium / amount to allocate ($)", type: "number", placeholder: "100000" },
+          { name: "desiredTerm", label: "Preferred guarantee term (if MYGA)", type: "select", options: ["3 years", "5 years", "7 years", "10 years", "Not sure"] },
+          { name: "incomeGoal", label: "Primary goal", type: "select", options: ["Growth / accumulation", "Lifetime income", "Bridge income to retirement", "Legacy / transfer", "Not sure"] },
+        ],
+      },
+      {
+        title: "Funding",
+        fields: [
+          { name: "fundingSource", label: "Planned funding source", type: "select", options: ["Cash", "401(k) / IRA rollover", "Bank / CD", "Sale of property", "Other"] },
+          { name: "riskTolerance", label: "Risk tolerance", type: "select", options: ["Conservative (guaranteed)", "Moderate", "Growth-oriented"] },
+        ],
+      },
+    ],
+  },
 ];
 
 export const getServiceByKey = (key) =>

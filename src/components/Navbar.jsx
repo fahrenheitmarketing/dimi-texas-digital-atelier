@@ -11,6 +11,8 @@ const navLinks = [
   { label: 'Life', path: '/life-insurance' },
   { label: 'Commercial', path: '/commercial-insurance' },
   { label: 'Occupational', path: '/occupational-insurance' },
+  { label: 'LTC', path: '/long-term-care' },
+  { label: 'Annuities', path: '/annuities' },
   { label: 'About', path: '/about' },
   { label: 'Contact', path: '/contact' },
 ];
@@ -47,7 +49,7 @@ export default function Navbar() {
           <Logo className="scale-[0.9] md:scale-[1.125] origin-left" />
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-5">
             {navLinks.map((link) => {
               const active = location.pathname === link.path;
               return (

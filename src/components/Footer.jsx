@@ -25,6 +25,8 @@ export default function Footer() {
               <li><Link to="/life-insurance" className="text-sm text-white/70 hover:text-brand-red transition-colors">Life Insurance</Link></li>
               <li><Link to="/commercial-insurance" className="text-sm text-white/70 hover:text-brand-red transition-colors">Commercial Insurance</Link></li>
               <li><Link to="/occupational-insurance" className="text-sm text-white/70 hover:text-brand-red transition-colors">Occupational Insurance</Link></li>
+              <li><Link to="/long-term-care" className="text-sm text-white/70 hover:text-brand-red transition-colors">Long-Term Care Insurance</Link></li>
+              <li><Link to="/annuities" className="text-sm text-white/70 hover:text-brand-red transition-colors">Annuities</Link></li>
             </ul>
           </div>
 
@@ -66,7 +68,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Diversified Insurance (DIMI Texas). All Rights Reserved.
           </p>
           <p className="text-xs text-white/40">
-            Home • Auto • Commercial • Life • Occupational
+            Home • Auto • Commercial • Life • Occupational • LTC • Annuities
           </p>
         </div>
       </div>

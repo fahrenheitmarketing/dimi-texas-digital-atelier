@@ -1,5 +1,6 @@
 import React from 'react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import LifeNeedsCalculator from '@/components/calculators/LifeNeedsCalculator';
 
 const LIFE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/467d1078c_generated_c436bfd7.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
@@ -86,6 +87,7 @@ export default function LifeInsurance() {
       ctaSubtitle="The best time to buy life insurance was yesterday. The second-best time is today. Let us find the right coverage at the right price — before you need it."
       ctaImage={QUOTE_IMG}
       serviceKey="life"
+      calculator={<LifeNeedsCalculator />}
     />
   );
 }

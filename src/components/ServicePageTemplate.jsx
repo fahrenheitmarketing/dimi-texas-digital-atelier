@@ -23,6 +23,7 @@ export default function ServicePageTemplate({
   ctaSubtitle,
   ctaImage,
   serviceKey,
+  calculator,
 }) {
   return (
     <Layout>
@@ -118,6 +119,13 @@ export default function ServicePageTemplate({
               ))}
             </div>
           </div>
+        </section>
+      )}
+
+      {/* INTERACTIVE CALCULATOR */}
+      {calculator && (
+        <section className="py-16 md:py-20 px-6 md:px-12 bg-muted/40">
+          <div className="max-w-5xl mx-auto">{calculator}</div>
         </section>
       )}
 
