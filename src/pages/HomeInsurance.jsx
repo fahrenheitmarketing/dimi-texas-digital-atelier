@@ -3,6 +3,7 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 const HOME_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/cd15e64b2_generated_0dbfa99c.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
+const CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/8d8a7f63e_generated_image.png';
 
 const faqs = [
   {
@@ -84,7 +85,7 @@ export default function HomeInsurance() {
       faqTitle="Homeowners Insurance Questions, Answered"
       ctaTitle="Is your home truly protected?"
       ctaSubtitle="Let us review your current coverage and shop the market. You may be surprised what better protection looks like — often for less than you're paying now."
-      ctaImage={QUOTE_IMG}
+      ctaImage={CTA_IMG}
       serviceKey="home"
     />
   );

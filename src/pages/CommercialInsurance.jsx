@@ -3,6 +3,7 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 const COMMERCIAL_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/b8a444f91_generated_eb127168.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
+const CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/dc55cebcc_generated_image.png';
 
 const faqs = [
   {
@@ -84,7 +85,7 @@ export default function CommercialInsurance() {
       faqTitle="Commercial Insurance Questions, Answered"
       ctaTitle="Is your business properly protected?"
       ctaSubtitle="Let us assess your risks and shop the market for the right coverage. A stronger protection program may cost less than you think — and it's worth everything when you need it."
-      ctaImage={QUOTE_IMG}
+      ctaImage={CTA_IMG}
       serviceKey="commercial"
     />
   );

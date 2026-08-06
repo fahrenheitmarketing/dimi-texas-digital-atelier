@@ -3,6 +3,7 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 const OCCUPATIONAL_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/6191d0c34_generated_951d992b.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
+const CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/36429db6f_generated_image.png';
 
 const faqs = [
   {
@@ -84,7 +85,7 @@ export default function OccupationalInsurance() {
       faqTitle="Occupational Insurance Questions, Answered"
       ctaTitle="Could your business save 10–50% on workplace injury coverage?"
       ctaSubtitle="There's only one way to find out. Let us run a free, no-obligation comparison of your current workers' comp premium versus occupational accident coverage. The numbers may surprise you."
-      ctaImage={QUOTE_IMG}
+      ctaImage={CTA_IMG}
       serviceKey="occupational"
     />
   );

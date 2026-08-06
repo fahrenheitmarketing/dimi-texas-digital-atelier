@@ -3,6 +3,7 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 
 const LTC_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/cd15e64b2_generated_0dbfa99c.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
+const CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/9be10ea3c_generated_image.png';
 
 const faqs = [
   {
@@ -72,7 +73,7 @@ export default function LongTermCare() {
       faqTitle="Long-Term Care Questions, Answered"
       ctaTitle="Have you planned for the cost of care?"
       ctaSubtitle="The best time to plan is while you're still healthy. Let us shop the market and design long-term care coverage that protects your savings and preserves your choices — before you need it."
-      ctaImage={QUOTE_IMG}
+      ctaImage={CTA_IMG}
       serviceKey="ltc"
     />
   );

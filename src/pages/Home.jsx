@@ -16,6 +16,7 @@ const LIFE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25
 const COMMERCIAL_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/b8a444f91_generated_eb127168.png';
 const ABOUT_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/6191d0c34_generated_951d992b.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
+const HOME_CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/ed7fe988a_generated_image.png';
 
 const insuranceTypes = [
   { key: 'Auto', icon: Car },
@@ -345,7 +346,7 @@ export default function Home() {
       <CtaBanner
         title="Let's build your protection."
         subtitle="One conversation is all it takes. We'll shop the market, compare your options, and find coverage that genuinely fits your life and your budget."
-        image={QUOTE_IMG}
+        image={HOME_CTA_IMG}
       />
     </Layout>
   );

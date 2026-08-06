@@ -8,6 +8,7 @@ import CtaBanner from '@/components/CtaBanner';
 
 const ABOUT_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/6191d0c34_generated_951d992b.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
+const ABOUT_CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/e48f475d7_generated_image.png';
 
 const faqs = [
   {
@@ -165,7 +166,7 @@ export default function About() {
       <CtaBanner
         title="Let's start a conversation."
         subtitle="Whether you're shopping for your first policy or reevaluating coverage you've had for years, we'd love to help. No pressure, no jargon — just honest guidance from people who care."
-        image={QUOTE_IMG}
+        image={ABOUT_CTA_IMG}
       />
     </Layout>
   );

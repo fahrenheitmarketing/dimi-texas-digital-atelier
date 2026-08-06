@@ -4,6 +4,7 @@ import LifeNeedsCalculator from '@/components/calculators/LifeNeedsCalculator';
 
 const LIFE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/467d1078c_generated_c436bfd7.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
+const CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/c7f0efc62_generated_image.png';
 
 const faqs = [
   {
@@ -85,7 +86,7 @@ export default function LifeInsurance() {
       faqTitle="Life Insurance Questions, Answered"
       ctaTitle="Protect the people who depend on you."
       ctaSubtitle="The best time to buy life insurance was yesterday. The second-best time is today. Let us find the right coverage at the right price — before you need it."
-      ctaImage={QUOTE_IMG}
+      ctaImage={CTA_IMG}
       serviceKey="life"
       calculator={<LifeNeedsCalculator />}
     />

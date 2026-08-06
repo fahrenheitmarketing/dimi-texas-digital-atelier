@@ -4,6 +4,7 @@ import AnnuitiesIncomeCalculator from '@/components/calculators/AnnuitiesIncomeC
 
 const ANNUITIES_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/b8a444f91_generated_eb127168.png';
 const QUOTE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/bfbfa0459_generated_dbfac6bf.png';
+const CTA_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/9b8d9c62e_generated_image.png';
 
 const faqs = [
   {
@@ -69,7 +70,7 @@ export default function Annuities() {
       faqTitle="Annuities Questions, Answered"
       ctaTitle="Ready to guarantee your retirement income?"
       ctaSubtitle="Let us shop today's top annuity rates and find a contract that protects your principal and pays you for life. No obligation — just a clear, honest look at your options."
-      ctaImage={QUOTE_IMG}
+      ctaImage={CTA_IMG}
       serviceKey="annuities"
       calculator={<AnnuitiesIncomeCalculator />}
     />
