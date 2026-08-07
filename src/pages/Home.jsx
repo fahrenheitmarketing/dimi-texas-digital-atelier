@@ -12,6 +12,7 @@ import CtaBanner from '@/components/CtaBanner';
 import AnimatedStat from '@/components/AnimatedStat';
 
 const HERO_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/cd15e64b2_generated_0dbfa99c.png';
+const HERO_BG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/047293005_Gemini_Generated_Image_lx8q3glx8q3glx8q.png';
 const AUTO_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/be6b9a1bd_generated_b48b15e1.png';
 const LIFE_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/467d1078c_generated_c436bfd7.png';
 const COMMERCIAL_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/b8a444f91_generated_eb127168.png';
@@ -82,18 +83,22 @@ export default function Home() {
   return (
     <Layout>
       {/* === HERO === */}
-      <section className="pt-28 pb-16 md:pt-36 md:pb-20 bg-gradient-to-b from-muted/60 to-white">
-        <div className="container-luxe">
+      <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src={HERO_BG} alt="Austin skyline at night over Lady Bird Lake" fittingType="fill" className="w-full h-full" />
+          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/70 via-brand-navy/80 to-brand-navy/95" />
+        </div>
+        <div className="relative container-luxe">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue rounded-full text-xs font-semibold tracking-wide mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white rounded-full text-xs font-semibold tracking-wide mb-6 backdrop-blur-sm">
               <Shield size={14} />
               Independent Insurance Agency • Texas
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-navy leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
               You could save when you{' '}
               <span className="text-brand-red">bundle your insurance</span>
             </h1>
-            <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+            <p className="text-lg text-white/80 mt-6 max-w-2xl mx-auto">
               Get a quote from Diversified Insurance and see how much you could save when we shop multiple top-rated carriers and build coverage that fits your life.
             </p>
           </div>
