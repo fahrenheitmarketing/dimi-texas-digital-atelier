@@ -85,7 +85,7 @@ export default function Home() {
       {/* === HERO === */}
       <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <Image src={HERO_BG} alt="Austin skyline at night over Lady Bird Lake" fittingType="fill" className="w-full h-full opacity-15 saturate-[0.2]" />
+          <Image src={HERO_BG} alt="Austin skyline at night over Lady Bird Lake" fittingType="fill" className="w-full h-full opacity-15" />
           <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white to-transparent" />
         </div>
         <div className="relative container-luxe">
