@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import {
   Car, Home as HomeIcon, HeartHandshake, Building2, HardHat,
   ArrowRight, Shield, Phone, Star, Check, Clock, DollarSign,
-  Headphones, User, Monitor, ChevronRight,
+  Headphones, ChevronRight,
 } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import Layout from '@/components/Layout';
@@ -257,41 +257,6 @@ export default function Home() {
               className="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/40 text-white font-body text-sm font-semibold rounded-lg hover:bg-white/10 transition-all min-h-[48px]">
               Manage your claim
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* === NOT SURE WHERE TO START === */}
-      <section className="py-16 md:py-20 px-6 md:px-12 bg-muted/40">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl text-brand-navy mb-10">Not sure where to start?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-border text-left">
-              <div className="w-12 h-12 rounded-lg bg-brand-blue/10 flex items-center justify-center mb-5">
-                <Monitor className="text-brand-blue" size={24} />
-              </div>
-              <h3 className="text-xl font-bold text-brand-navy mb-2">Quote on your own</h3>
-              <p className="text-sm text-muted-foreground mb-5">
-                We've made it easy to shop independently and confidently. Start your quote online in just a few minutes.
-              </p>
-              <Link to="/quote" className="btn-blue">
-                Get a quote
-                <ArrowRight size={16} />
-              </Link>
-            </div>
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-border text-left">
-              <div className="w-12 h-12 rounded-lg bg-brand-red/10 flex items-center justify-center mb-5">
-                <User className="text-brand-red" size={24} />
-              </div>
-              <h3 className="text-xl font-bold text-brand-navy mb-2">Work with an agent</h3>
-              <p className="text-sm text-muted-foreground mb-5">
-                Looking for extra support? Talk to a local independent agent and get personalized advice and a quote.
-              </p>
-              <a href="tel:5122923650" className="btn-primary">
-                <Phone size={16} />
-                Talk to an agent
-              </a>
-            </div>
           </div>
         </div>
       </section>
