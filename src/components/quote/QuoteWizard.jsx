@@ -40,7 +40,7 @@ export default function QuoteWizard() {
   return (
     <div className="max-w-5xl mx-auto">
       {service ? (
-        <QuoteForm service={service} onBack={handleBack} />
+        <QuoteForm service={service} onBack={handleBack} ServiceIcon={ICONS[selectedKey]} />
       ) : (
         <div>
           <div className="text-center mb-10">

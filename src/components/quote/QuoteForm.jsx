@@ -4,7 +4,7 @@ import { ArrowLeft, CheckCircle2, Loader2, Send } from 'lucide-react';
 import QuoteField from './QuoteField';
 import { CONTACT_FIELDS } from '@/data/quoteForms';
 
-export default function QuoteForm({ service, onBack }) {
+export default function QuoteForm({ service, onBack, ServiceIcon }) {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
@@ -91,9 +91,19 @@ export default function QuoteForm({ service, onBack }) {
     <div className="bg-white rounded-2xl shadow-lg border border-border overflow-hidden">
       <div id="quote-form-top" className="bg-brand-navy px-6 md:px-10 py-8">
         <div className="flex items-center justify-between gap-4">
-          <div>
-            <h2 className="text-2xl md:text-3xl text-white">{service.label} Quote Request</h2>
-            <p className="text-white/70 text-sm mt-2 max-w-xl">{service.blurb}</p>
+          <div className="flex items-start gap-4">
+            {ServiceIcon && (
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
+                <ServiceIcon size={24} className="text-white" />
+              </div>
+            )}
+            <div>
+              <span className="text-xs font-semibold tracking-[0.15em] uppercase text-brand-blue-light">
+                You're requesting a quote for
+              </span>
+              <h2 className="text-2xl md:text-3xl text-white mt-1">{service.label}</h2>
+              <p className="text-white/70 text-sm mt-2 max-w-xl">{service.blurb}</p>
+            </div>
           </div>
           <button
             onClick={onBack}

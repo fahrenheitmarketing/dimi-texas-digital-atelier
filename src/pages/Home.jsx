@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
   Car, Home as HomeIcon, HeartHandshake, Building2, HardHat,
   ArrowRight, Shield, Phone, Star, Check, Clock, DollarSign,
@@ -65,7 +65,19 @@ const homeFaqs = [
 ];
 
 export default function Home() {
+  const navigate = useNavigate();
   const [selected, setSelected] = useState('Auto');
+  const [zip, setZip] = useState('');
+  const [zipError, setZipError] = useState('');
+
+  const startQuote = () => {
+    if (!/^\d{5}$/.test(zip.trim())) {
+      setZipError('Please enter a valid 5-digit ZIP code.');
+      return;
+    }
+    setZipError('');
+    navigate(`/quote?service=${selected.toLowerCase()}`);
+  };
 
   return (
     <Layout>
@@ -124,17 +136,29 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <input
                   type="text"
+                  inputMode="numeric"
+                  maxLength={5}
+                  value={zip}
+                  onChange={(e) => {
+                    setZip(e.target.value.replace(/\D/g, '').slice(0, 5));
+                    if (zipError) setZipError('');
+                  }}
                   placeholder="ZIP Code"
-                  className="flex-1 px-4 py-3 rounded-lg border-2 border-border focus:border-brand-blue focus:outline-none text-foreground placeholder:text-muted-foreground"
+                  className={`flex-1 px-4 py-3 rounded-lg border-2 focus:outline-none text-foreground placeholder:text-muted-foreground ${
+                    zipError ? 'border-brand-red focus:border-brand-red' : 'border-border focus:border-brand-blue'
+                  }`}
                 />
-                <Link
-                  to={`/quote?service=${selected.toLowerCase()}`}
+                <button
+                  onClick={startQuote}
                   className="btn-blue whitespace-nowrap"
                 >
                   Get my price
                   <ArrowRight size={16} />
-                </Link>
+                </button>
               </div>
+              {zipError && (
+                <p className="text-sm text-brand-red font-semibold -mt-1">{zipError}</p>
+              )}
 
               <div className="text-center mt-4">
                 <a
