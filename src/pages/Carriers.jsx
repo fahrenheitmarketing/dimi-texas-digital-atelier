@@ -42,6 +42,39 @@ const carriers = [
       { label: 'Claims', phone: '18442002842', display: '(844) 200-2842', note: 'Option 1' },
     ],
   },
+  {
+    name: 'Foremost / Farmers',
+    numbers: [
+      { label: 'Policyholder Technical Support (Online Accounts)', phone: '18004224272', display: '1-800-422-4272' },
+      { label: 'Policyholder Customer Service (Alternate)', phone: '8004386381', display: '800-438-6381' },
+      { label: 'Claims & Roadside Assistance', phone: '18008546011', display: '1-800-854-6011' },
+    ],
+  },
+  {
+    name: 'Geico',
+    numbers: [
+      { label: 'Policyholder Claims Assistance', phone: '18008413000', display: '1-800-841-3000', note: 'No direct customer service line for policyholders' },
+    ],
+  },
+  {
+    name: 'TWIA (Texas Windstorm)',
+    numbers: [
+      { label: 'Policyholder Claims Line', phone: '18007888247', display: '1-800-788-8247' },
+    ],
+  },
+  {
+    name: 'Bristol West',
+    numbers: [
+      { label: 'Policyholder Customer Service Support', phone: '18888880080', display: '1-888-888-0080' },
+      { label: 'Claims & Roadside Assistance', phone: '18002747865', display: '1-800-274-7865' },
+    ],
+  },
+  {
+    name: 'Steadily',
+    numbers: [
+      { label: 'Claims', phone: '18889661611', display: '1-888-966-1611' },
+    ],
+  },
 ];
 
 function iconFor(label) {
