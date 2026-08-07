@@ -92,7 +92,7 @@ export default async function(req) {
       },
       body: JSON.stringify({
         from: `Diversified Insurance <${officeEmail}>`,
-        to: [officeEmail],
+        to: ["rcasas@fahrenheitmarketin.com"],
         reply_to: contact.email,
         subject,
         html,
