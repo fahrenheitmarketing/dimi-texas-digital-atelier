@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Image } from '@/components/ui/image';
-import { Check, ArrowRight, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
@@ -85,11 +85,14 @@ export default function ServicePageTemplate({
             <span className="text-sm font-semibold text-brand-blue tracking-wide uppercase">What We Cover</span>
             <h2 className="text-3xl md:text-4xl text-brand-navy mt-3">Coverage that adapts to you.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-xl overflow-hidden border border-border">
             {coverageAreas.map((area, i) => (
-              <div key={i} className="bg-white rounded-xl p-7 border border-border shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="w-10 h-10 rounded-lg bg-brand-blue flex items-center justify-center mb-5">
-                  <Check size={18} className="text-white" />
+              <div key={i} className="group bg-white p-8 hover:bg-lume/40 transition-colors duration-300">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="flex-shrink-0 w-9 h-9 rounded-full border border-brand-blue/30 flex items-center justify-center text-brand-blue font-display text-base font-semibold transition-colors duration-300 group-hover:bg-brand-blue group-hover:text-white group-hover:border-brand-blue">
+                    {String(i + 1).padStart(2, '0')}
+                  </div>
+                  <div className="h-px flex-1 bg-border group-hover:bg-brand-blue/40 transition-colors duration-300" />
                 </div>
                 <h3 className="text-lg font-bold text-brand-navy mb-2">{area.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{area.description}</p>
