@@ -83,22 +83,21 @@ export default function Home() {
   return (
     <Layout>
       {/* === HERO === */}
-      <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden">
+      <section className="relative pt-28 pb-16 md:pt-36 md:pb-20 overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <Image src={HERO_BG} alt="Austin skyline at night over Lady Bird Lake" fittingType="fill" className="w-full h-full" />
-          <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/70 via-brand-navy/80 to-brand-navy/95" />
+          <Image src={HERO_BG} alt="Austin skyline at night over Lady Bird Lake" fittingType="fill" className="w-full h-full opacity-30 saturate-[0.2]" />
         </div>
         <div className="relative container-luxe">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 text-white rounded-full text-xs font-semibold tracking-wide mb-6 backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-brand-blue/10 text-brand-blue rounded-full text-xs font-semibold tracking-wide mb-6">
               <Shield size={14} />
               Independent Insurance Agency • Texas
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-brand-navy leading-tight">
               You could save when you{' '}
               <span className="text-brand-red">bundle your insurance</span>
             </h1>
-            <p className="text-lg text-white/80 mt-6 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
               Get a quote from Diversified Insurance and see how much you could save when we shop multiple top-rated carriers and build coverage that fits your life.
             </p>
           </div>
