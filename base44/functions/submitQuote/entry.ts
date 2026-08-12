@@ -70,6 +70,23 @@ export default async function(req) {
     ];
     if (notes) rows.push(answerRow("Additional Notes", notes));
 
+    const attachments = Array.isArray(data?.attachments)
+      ? data.attachments
+          .filter((a) => a && a.url)
+          .map((a, i) => ({
+            filename: a.name || `attachment_${i + 1}`,
+            path: a.url,
+          }))
+      : [];
+    if (attachments.length) {
+      rows.push(
+        answerRow(
+          "Attached Policies",
+          attachments.map((a) => a.filename).join(", ")
+        )
+      );
+    }
+
     const submittedAt = new Date().toLocaleString("en-US", {
       timeZone: "America/Chicago",
     });
@@ -92,10 +109,11 @@ export default async function(req) {
       },
       body: JSON.stringify({
         from: `Diversified Insurance <${officeEmail}>`,
-        to: ["rcasas@fahrenheitmarketin.com"],
+        to: ["matt@dimitexas.com"],
         reply_to: contact.email,
         subject,
         html,
+        ...(attachments.length ? { attachments } : {}),
       }),
     });
 

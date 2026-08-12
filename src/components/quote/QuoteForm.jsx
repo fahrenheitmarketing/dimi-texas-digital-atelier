@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { base44 } from '@/api/base44Client';
 import { ArrowLeft, CheckCircle2, Loader2, Send } from 'lucide-react';
 import QuoteField from './QuoteField';
+import PolicyUploader from './PolicyUploader';
 import { CONTACT_FIELDS } from '@/data/quoteForms';
 
 export default function QuoteForm({ service, onBack, ServiceIcon }) {
@@ -10,8 +11,33 @@ export default function QuoteForm({ service, onBack, ServiceIcon }) {
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [attachments, setAttachments] = useState([]);
 
   const set = (name, v) => setValues((prev) => ({ ...prev, [name]: v }));
+
+  const serviceGroupsRequired = service.sections
+    .map((s) => ({ title: s.title, fields: s.fields.filter((f) => f.required) }))
+    .filter((g) => g.fields.length > 0);
+  const serviceGroupsOptional = service.sections
+    .map((s) => ({ title: s.title, fields: s.fields.filter((f) => !f.required) }))
+    .filter((g) => g.fields.length > 0);
+  const contactRequired = CONTACT_FIELDS.filter((f) => f.required);
+  const contactOptional = CONTACT_FIELDS.filter((f) => !f.required);
+
+  const renderGrid = (fields) => (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      {fields.map((f) => (
+        <div key={f.name} className={f.width === 'full' ? 'md:col-span-2' : ''}>
+          <QuoteField
+            field={f}
+            value={values[f.name]}
+            onChange={(v) => set(f.name, v)}
+            error={errors[f.name]}
+          />
+        </div>
+      ))}
+    </div>
+  );
 
   const requiredFields = [
     ...service.sections.flatMap((s) =>
@@ -53,6 +79,7 @@ export default function QuoteForm({ service, onBack, ServiceIcon }) {
         contact,
         answers,
         notes: values.notes || '',
+        attachments,
       });
       if (res?.data?.ok) {
         setSubmitted(true);
@@ -116,58 +143,63 @@ export default function QuoteForm({ service, onBack, ServiceIcon }) {
       </div>
 
       <form onSubmit={handleSubmit} className="px-6 md:px-10 py-8 md:py-10 space-y-10">
-        {service.sections.map((section) => (
-          <div key={section.title}>
-            <h3 className="text-xs font-bold tracking-wide uppercase text-brand-blue mb-5">
-              {section.title}
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {section.fields.map((f) => (
-                <div
-                  key={f.name}
-                  className={f.width === 'full' ? 'md:col-span-2' : ''}
-                >
-                  <QuoteField
-                    field={f}
-                    value={values[f.name]}
-                    onChange={(v) => set(f.name, v)}
-                    error={errors[f.name]}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-
+        {/* REQUIRED */}
         <div>
-          <h3 className="text-xs font-bold tracking-wide uppercase text-brand-blue mb-5">
-            Your Contact Information
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {CONTACT_FIELDS.map((f) => (
-              <div key={f.name} className={f.width === 'full' ? 'md:col-span-2' : ''}>
-                <QuoteField
-                  field={f}
-                  value={values[f.name]}
-                  onChange={(v) => set(f.name, v)}
-                  error={errors[f.name]}
-                />
+          <div className="flex items-center gap-2 mb-6">
+            <span className="w-2.5 h-2.5 rounded-full bg-brand-red" />
+            <h3 className="text-xs font-bold tracking-wide uppercase text-brand-blue">
+              Required to submit
+            </h3>
+          </div>
+          <div className="space-y-8">
+            {serviceGroupsRequired.map((g) => (
+              <div key={g.title}>
+                <p className="text-xs font-semibold text-muted-foreground mb-4">{g.title}</p>
+                {renderGrid(g.fields)}
               </div>
             ))}
+            <div>
+              <p className="text-xs font-semibold text-muted-foreground mb-4">Your Contact Information</p>
+              {renderGrid(contactRequired)}
+            </div>
           </div>
         </div>
 
-        <div>
-          <QuoteField
-            field={{
-              name: 'notes',
-              label: 'Anything else we should know?',
-              type: 'textarea',
-              placeholder: 'Additional details, questions, or specific coverage needs…',
-            }}
-            value={values.notes}
-            onChange={(v) => set('notes', v)}
-          />
+        {/* OPTIONAL */}
+        <div className="pt-8 border-t border-border">
+          <div className="flex items-center gap-2 mb-6">
+            <span className="w-2.5 h-2.5 rounded-full bg-clay" />
+            <h3 className="text-xs font-bold tracking-wide uppercase text-muted-foreground">
+              Additional information (optional)
+            </h3>
+          </div>
+          <div className="space-y-8">
+            {serviceGroupsOptional.map((g) => (
+              <div key={g.title}>
+                <p className="text-xs font-semibold text-muted-foreground mb-4">{g.title}</p>
+                {renderGrid(g.fields)}
+              </div>
+            ))}
+            {contactOptional.length > 0 && (
+              <div>
+                <p className="text-xs font-semibold text-muted-foreground mb-4">Your Contact Information</p>
+                {renderGrid(contactOptional)}
+              </div>
+            )}
+            <PolicyUploader value={attachments} onChange={setAttachments} />
+            <div>
+              <QuoteField
+                field={{
+                  name: 'notes',
+                  label: 'Anything else we should know?',
+                  type: 'textarea',
+                  placeholder: 'Additional details, questions, or specific coverage needs…',
+                }}
+                value={values.notes}
+                onChange={(v) => set('notes', v)}
+              />
+            </div>
+          </div>
         </div>
 
         {serverError && (

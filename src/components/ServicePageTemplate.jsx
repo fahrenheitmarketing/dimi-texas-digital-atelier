@@ -24,6 +24,7 @@ export default function ServicePageTemplate({
   ctaImage,
   serviceKey,
   calculator,
+  heroExtraActions,
 }) {
   return (
     <Layout>
@@ -62,6 +63,7 @@ export default function ServicePageTemplate({
                   >
                     Call (512) 292-3650
                   </a>
+                  {heroExtraActions}
                 </div>
               </div>
             </div>

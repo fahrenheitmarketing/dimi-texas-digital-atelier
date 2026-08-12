@@ -1,4 +1,5 @@
 import React from 'react';
+import { ExternalLink } from 'lucide-react';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
 import LifeNeedsCalculator from '@/components/calculators/LifeNeedsCalculator';
 
@@ -88,6 +89,17 @@ export default function LifeInsurance() {
       ctaSubtitle="The best time to buy life insurance was yesterday. The second-best time is today. Let us find the right coverage at the right price — before you need it."
       ctaImage={CTA_IMG}
       serviceKey="life"
+      heroExtraActions={
+        <a
+          href="https://www.appcelerate.life/dimi-lp"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brand-navy text-white font-body text-sm font-semibold rounded-lg hover:bg-brand-navy/90 transition-all min-h-[48px]"
+        >
+          Get an instant life quote
+          <ExternalLink size={16} />
+        </a>
+      }
       calculator={<LifeNeedsCalculator />}
     />
   );
