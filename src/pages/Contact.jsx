@@ -4,7 +4,6 @@ import { Phone, MapPin, Clock, ArrowRight, ChevronRight, Loader2, CheckCircle2 }
 import { Image } from '@/components/ui/image';
 import Layout from '@/components/Layout';
 import PolicyUploader from '@/components/quote/PolicyUploader';
-import TeamDirectory from '@/components/TeamDirectory';
 import { base44 } from '@/api/base44Client';
 
 const CONTACT_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/fc13724b2_generated_image.png';
@@ -280,7 +279,6 @@ export default function Contact() {
         </div>
       </section>
 
-      <TeamDirectory />
     </Layout>
   );
 }
