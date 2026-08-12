@@ -1,25 +1,54 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, MapPin, Clock, ArrowRight, ChevronRight } from 'lucide-react';
+import { Phone, MapPin, Clock, ArrowRight, ChevronRight, Loader2, CheckCircle2 } from 'lucide-react';
 import { Image } from '@/components/ui/image';
 import Layout from '@/components/Layout';
+import PolicyUploader from '@/components/quote/PolicyUploader';
+import TeamDirectory from '@/components/TeamDirectory';
+import { base44 } from '@/api/base44Client';
 
 const CONTACT_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/fc13724b2_generated_image.png';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '', insuranceType: 'Auto' });
+  const [submitting, setSubmitting] = useState(false);
+  const [serverError, setServerError] = useState('');
+  const [attachments, setAttachments] = useState([]);
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    insuranceType: 'General question / other',
+    message: '',
+  });
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setServerError('');
+    if (!form.name || !form.email || !form.message) {
+      setServerError('Please include your name, email, and a message.');
+      return;
+    }
+    setSubmitting(true);
+    try {
+      const res = await base44.functions.invoke('submitContact', { ...form, attachments });
+      if (res?.data?.ok) {
+        setSubmitted(true);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        setServerError(res?.data?.error || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setServerError(err.message || 'Unable to send. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const inputClass = 'w-full px-4 py-3 rounded-lg border-2 border-border focus:border-brand-blue focus:outline-none text-foreground placeholder:text-muted-foreground transition-colors';
+  const inputClass =
+    'w-full px-4 py-3 rounded-lg border-2 border-border focus:border-brand-blue focus:outline-none text-foreground placeholder:text-muted-foreground transition-colors';
   const labelClass = 'block text-sm font-semibold text-brand-navy mb-2';
 
   return (
@@ -57,19 +86,25 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Form */}
           <div>
-            <span className="text-sm font-semibold text-brand-blue tracking-wide uppercase">Request a Quote</span>
-            <h2 className="text-3xl md:text-4xl text-brand-navy mt-3 mb-8">
-              Start your free quote.
+            <span className="text-sm font-semibold text-brand-blue tracking-wide uppercase">Send a Message</span>
+            <h2 className="text-3xl md:text-4xl text-brand-navy mt-3 mb-4">
+              How can we help?
             </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8 max-w-md">
+              Have a general question, ready for a quote, or just want to talk through your options?
+              Send us a message and a real person will get back to you within one business day.
+            </p>
 
             {submitted ? (
               <div className="bg-muted/40 rounded-xl border border-border p-10 text-center">
-                <div className="w-14 h-14 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-6">
-                  <ArrowRight size={24} className="text-white" />
+                <div className="w-14 h-14 bg-brand-blue/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle2 size={28} className="text-brand-blue" />
                 </div>
-                <h3 className="text-2xl font-bold text-brand-navy mb-3">Thank You!</h3>
+                <h3 className="text-2xl font-bold text-brand-navy mb-3">Message sent!</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We've received your request and will be in touch within one business day. For immediate assistance, call us at <a href="tel:5122923650" className="text-brand-red font-semibold">(512) 292-3650</a>.
+                  Thanks for reaching out. We've received your message and will be in touch within one
+                  business day. For immediate assistance, call us at{' '}
+                  <a href="tel:5122923650" className="text-brand-red font-semibold">(512) 292-3650</a>.
                 </p>
               </div>
             ) : (
@@ -100,11 +135,10 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className={labelClass}>Phone *</label>
+                    <label className={labelClass}>Phone</label>
                     <input
                       type="tel"
                       name="phone"
-                      required
                       value={form.phone}
                       onChange={handleChange}
                       className={inputClass}
@@ -113,36 +147,65 @@ export default function Contact() {
                   </div>
                 </div>
                 <div>
-                  <label className={labelClass}>Insurance Type</label>
+                  <label className={labelClass}>What's this about?</label>
                   <select
                     name="insuranceType"
                     value={form.insuranceType}
                     onChange={handleChange}
                     className={inputClass}
                   >
+                    <option>General question / other</option>
                     <option>Auto Insurance</option>
                     <option>Homeowners Insurance</option>
                     <option>Life Insurance</option>
                     <option>Commercial Insurance</option>
                     <option>Occupational Insurance</option>
+                    <option>Long-Term Care</option>
+                    <option>Annuities</option>
                     <option>Other / Multiple</option>
                   </select>
                 </div>
                 <div>
-                  <label className={labelClass}>How Can We Help?</label>
+                  <label className={labelClass}>Message *</label>
                   <textarea
                     name="message"
                     rows={4}
+                    required
                     value={form.message}
                     onChange={handleChange}
                     className={`${inputClass} resize-none`}
-                    placeholder="Tell us a bit about what you're looking for..."
+                    placeholder="Tell us what you need…"
                   />
                 </div>
-                <button type="submit" className="btn-primary w-full">
-                  Send Request
-                  <ArrowRight size={16} />
+
+                <PolicyUploader value={attachments} onChange={setAttachments} />
+
+                {serverError && (
+                  <div className="rounded-lg border-2 border-brand-red/30 bg-brand-red/5 px-4 py-3 text-sm text-brand-red font-semibold">
+                    {serverError}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="btn-primary w-full disabled:opacity-60"
+                >
+                  {submitting ? (
+                    <>
+                      <Loader2 size={16} className="animate-spin" />
+                      Sending…
+                    </>
+                  ) : (
+                    <>
+                      Send message
+                      <ArrowRight size={16} />
+                    </>
+                  )}
                 </button>
+                <p className="text-xs text-muted-foreground text-center">
+                  No obligation. We'll respond within one business day.
+                </p>
               </form>
             )}
           </div>
@@ -194,13 +257,13 @@ export default function Contact() {
               <h3 className="text-xs font-bold tracking-wide uppercase text-muted-foreground mb-5">Quick Links</h3>
               <div className="flex flex-col gap-3">
                 <a
-                  href="https://www.lifeinsurancesimply.com/diversifiedinsurance"
+                  href="https://www.appcelerate.life/dimi-lp"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-brand-navy hover:text-brand-red transition-colors"
                 >
                   <ArrowRight size={16} />
-                  Get an Instant Quote
+                  Get an Instant Life Quote
                 </a>
                 <a
                   href="https://dimitexas.epaypolicy.com/"
@@ -216,6 +279,8 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      <TeamDirectory />
     </Layout>
   );
 }

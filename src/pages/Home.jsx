@@ -10,6 +10,7 @@ import Layout from '@/components/Layout';
 import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
 import AnimatedStat from '@/components/AnimatedStat';
+import CarrierMarquee from '@/components/CarrierMarquee';
 
 const HERO_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/cd15e64b2_generated_0dbfa99c.png';
 const HERO_BG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/047293005_Gemini_Generated_Image_lx8q3glx8q3glx8q.png';
@@ -204,6 +205,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <CarrierMarquee />
 
       {/* === PRODUCT CARDS === */}
       <section className="py-16 md:py-20 px-6 md:px-12">
