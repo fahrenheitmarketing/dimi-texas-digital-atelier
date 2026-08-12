@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const CARRIERS = [
   { name: 'Progressive', domain: 'progressive.com' },
-  { name: 'SafeCo', domain: 'safeco.com' },
   { name: 'Liberty Mutual', domain: 'libertymutual.com' },
   { name: 'The Hartford', domain: 'thehartford.com' },
   { name: 'SageSure', domain: 'sagesure.com' },
