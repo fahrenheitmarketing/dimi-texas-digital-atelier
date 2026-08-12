@@ -28,11 +28,11 @@ function CarrierLogo({ name, domain }) {
 
   return (
     <img
-      src={`https://logo.clearbit.com/${domain}`}
+      src={`https://www.google.com/s2/favicons?sz=128&domain=${domain}`}
       alt={`${name} logo`}
       onError={() => setFailed(true)}
       loading="lazy"
-      className="h-8 md:h-10 w-auto opacity-60 hover:opacity-100 transition-opacity whitespace-nowrap"
+      className="h-9 md:h-11 w-9 md:w-11 object-contain opacity-70 hover:opacity-100 transition-opacity whitespace-nowrap"
     />
   );
 }
