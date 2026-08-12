@@ -1,6 +1,6 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
 import { Image } from '@/components/ui/image';
+import TeamContactForm from './TeamContactForm';
 
 const TEAM = [
   {
@@ -107,13 +107,7 @@ export default function TeamDirectory() {
               </div>
 
               {m.email ? (
-                <a
-                  href={`mailto:${m.email}`}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-brand-red transition-colors mb-3"
-                >
-                  <Mail size={15} />
-                  {m.email}
-                </a>
+                <TeamContactForm memberName={m.name} memberEmail={m.email} />
               ) : (
                 <p className="text-sm text-muted-foreground italic mb-3">
                   No email — Ace is off the clock.
