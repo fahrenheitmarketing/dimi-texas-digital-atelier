@@ -52,7 +52,7 @@ const TEAM = [
     name: 'Ace',
     role: 'Chief Barketing Officer',
     email: '',
-    image: 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/4a6ee4209_ace.png',
+    image: 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/b8ff23b08_image.png',
     bio: [
       "Ace is our English Cream Golden Retriever and arguably the most overcompensated part-time employee at Diversified Insurance. His office hours are strictly Thursdays from 9–2, although his actual productivity window is considerably smaller. His primary responsibilities include greeting clients, boosting office morale, inspecting all incoming lunches, and taking several well-earned naps despite having accomplished very little. Ace specializes in Paw-sonal Lines. He has no email, refuses to answer the phone, frequently sleeps on the job, and maintains a perfect record of zero returned calls. Despite multiple documented performance issues, Ace remains extremely popular with clients and somehow continues to receive glowing annual reviews. Management suspects it's because he's handsome.",
     ],
