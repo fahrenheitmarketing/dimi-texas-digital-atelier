@@ -17,23 +17,21 @@ const CARRIERS = [
 
 function CarrierLogo({ name, domain }) {
   const [failed, setFailed] = useState(false);
-
-  if (failed) {
-    return (
-      <span className="font-display text-2xl md:text-3xl font-semibold text-brand-navy/60 whitespace-nowrap">
+  return (
+    <span className="flex items-center gap-3 whitespace-nowrap opacity-70 hover:opacity-100 transition-opacity">
+      {!failed && (
+        <img
+          src={`https://www.google.com/s2/favicons?sz=128&domain=${domain}`}
+          alt={`${name} logo`}
+          onError={() => setFailed(true)}
+          loading="lazy"
+          className="h-8 md:h-10 w-8 md:w-10 object-contain"
+        />
+      )}
+      <span className="font-display text-xl md:text-2xl font-semibold text-brand-navy/60">
         {name}
       </span>
-    );
-  }
-
-  return (
-    <img
-      src={`https://www.google.com/s2/favicons?sz=128&domain=${domain}`}
-      alt={`${name} logo`}
-      onError={() => setFailed(true)}
-      loading="lazy"
-      className="h-9 md:h-11 w-9 md:w-11 object-contain opacity-70 hover:opacity-100 transition-opacity whitespace-nowrap"
-    />
+    </span>
   );
 }
 
