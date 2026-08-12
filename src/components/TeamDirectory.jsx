@@ -7,6 +7,7 @@ const TEAM = [
     name: 'Matt Van Bergen',
     role: 'Owner',
     email: 'Matt@Dimitexas.com',
+    image: 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/a22f1af21_image.png',
     bio: [
       "Matt Van Bergen founded Diversified Insurance in 2012 with a simple philosophy: put the customer first and do what you say you're going to do. Since then, he has built the agency around transparency, responsiveness, and follow-through — making insurance easier to understand while helping clients protect what matters most.",
       "Matt graduated from Texas A&M University in 2002 with a degree from the Mays Business School. He brings more than a decade of experience as an agency owner and takes pride in building long-term relationships with his clients and serving as a trusted resource for their insurance needs. Outside the office, Matt married the love of his life in 2010, and together they're raising three kids who keep life busy, fun, and rarely boring. When he's not working, you'll usually find Matt and his family traveling somewhere new, spending time with friends and family, or planning their weekend around whatever football game happens to be on.",
