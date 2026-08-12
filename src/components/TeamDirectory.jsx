@@ -122,15 +122,19 @@ export default function TeamDirectory() {
                     Read bio
                   </summary>
                   <div className="mt-3 space-y-3 text-sm text-muted-foreground leading-relaxed">
-                    {m.bioImage && (
+                    {m.bioImage ? (
+                      <div className="overflow-hidden rounded-lg">
+                        <img src={m.bioImage} alt={m.name} className="block w-full" />
+                      </div>
+                    ) : m.image ? (
                       <div className="overflow-hidden rounded-lg">
                         <img
-                          src={m.bioImage}
-                          alt=""
-                          className="block w-full"
+                          src={m.image}
+                          alt={m.name}
+                          className="block w-full h-56 object-cover object-top"
                         />
                       </div>
-                    )}
+                    ) : null}
                     {m.bio.map((p, i) => (
                       <p key={i}>{p}</p>
                     ))}
