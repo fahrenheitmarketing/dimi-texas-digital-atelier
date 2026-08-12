@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, PawPrint } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Image } from '@/components/ui/image';
 
 const TEAM = [
   {
@@ -15,6 +16,7 @@ const TEAM = [
     name: 'Art Sandoval',
     role: 'Agent',
     email: 'Art@Dimitexas.com',
+    image: 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/d7788d1c4_sandoval.png',
     bio: [
       "A Texas native, born and raised in the small border town of Brownsville, and a proud father to his first baby boy. With 10 years of experience in the insurance industry, Art started his career as a CSR and worked his way through, learning the ins and outs of insurance from the ground up. Today, as an Agent, he uses that experience to help clients find the right coverage while making the insurance process simple, transparent, and personal.",
     ],
@@ -23,6 +25,7 @@ const TEAM = [
     name: 'Madison Hammond',
     role: 'Agent',
     email: 'Madison@Dimitexas.com',
+    image: 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/0c8b9d4b7_hammond.png',
     bio: [
       "Born and raised in Buda and a proud Texas Tech graduate, Madison is excited to help her fellow Texans find insurance coverage that fits their needs and their budget. She believes insurance doesn't have to be complicated, and she's committed to making the process easy, straightforward, and personal. She looks forward to continuing to grow in the industry and building strong, lasting relationships with her clients.",
     ],
@@ -31,6 +34,7 @@ const TEAM = [
     name: 'Audrey Welu',
     role: 'Customer Service Representative',
     email: 'Audrey@Dimitexas.com',
+    image: 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/e1402859b_welu.png',
     bio: [
       "Hello, there! My name is Audrey Welu, and I've worked as a customer service representative for Diversified Insurance since 2018. With prior experience in insurance and the corporate housing realm, I enjoy providing personalized support for both our valued customers and our dedicated DIMI crew. In a nutshell, personally, I'm a literature and music-loving, houseplant fanatic who enjoys staying active, practicing piano, and, above all, spending time with my precious family.",
     ],
@@ -39,13 +43,14 @@ const TEAM = [
     name: 'Ayanna Caballero',
     role: 'Customer Service Rep',
     email: 'ayanna@dimitexas.com',
+    image: 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/d3a276154_caballero.png',
     bio: [],
   },
   {
     name: 'Ace',
     role: 'Chief Barketing Officer',
     email: '',
-    paw: true,
+    image: 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/4a6ee4209_ace.png',
     bio: [
       "Ace is our English Cream Golden Retriever and arguably the most overcompensated part-time employee at Diversified Insurance. His office hours are strictly Thursdays from 9–2, although his actual productivity window is considerably smaller. His primary responsibilities include greeting clients, boosting office morale, inspecting all incoming lunches, and taking several well-earned naps despite having accomplished very little. Ace specializes in Paw-sonal Lines. He has no email, refuses to answer the phone, frequently sleeps on the job, and maintains a perfect record of zero returned calls. Despite multiple documented performance issues, Ace remains extremely popular with clients and somehow continues to receive glowing annual reviews. Management suspects it's because he's handsome.",
     ],
@@ -81,15 +86,20 @@ export default function TeamDirectory() {
               className="bg-white rounded-xl border border-border shadow-sm p-6 flex flex-col"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="flex-shrink-0 w-14 h-14 rounded-full bg-brand-blue/10 flex items-center justify-center">
-                  {m.paw ? (
-                    <PawPrint size={26} className="text-brand-blue" />
-                  ) : (
+                {m.image ? (
+                  <Image
+                    src={m.image}
+                    alt={m.name}
+                    fittingType="fill"
+                    className="flex-shrink-0 w-16 h-16 rounded-full overflow-hidden border border-brand-blue/10"
+                  />
+                ) : (
+                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-brand-blue/10 flex items-center justify-center">
                     <span className="font-display text-xl font-semibold text-brand-blue">
                       {initials(m.name)}
                     </span>
-                  )}
-                </div>
+                  </div>
+                )}
                 <div className="min-w-0">
                   <h3 className="text-lg font-bold text-brand-navy leading-tight">{m.name}</h3>
                   <p className="text-sm text-muted-foreground">{m.role}</p>
