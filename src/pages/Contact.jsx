@@ -245,7 +245,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-xs font-bold tracking-wide uppercase text-muted-foreground mb-1">Office Hours</h3>
-                  <p className="text-sm font-bold text-brand-navy">Monday – Friday: 9:00 AM – 6:00 PM</p>
+                  <p className="text-sm font-bold text-brand-navy">Monday – Friday: 8:00 AM – 5:00 PM</p>
                   <p className="text-sm text-muted-foreground mt-1">Claims support available 24/7</p>
                 </div>
               </div>
