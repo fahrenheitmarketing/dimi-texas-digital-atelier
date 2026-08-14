@@ -87,6 +87,8 @@ export default function HomeInsurance() {
       ctaSubtitle="Let us review your current coverage and shop the market. You may be surprised what better protection looks like — often for less than you're paying now."
       ctaImage={CTA_IMG}
       serviceKey="home"
+      metaTitle="Homeowners Insurance in Texas | Diversified Insurance"
+      metaDescription="Protect your home, belongings and family with Texas homeowners insurance built for local risks — wind, hail and weather. Bundling discounts available."
     />
   );
 }

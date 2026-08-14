@@ -1,8 +1,13 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import QuoteWizard from '@/components/quote/QuoteWizard';
+import useDocumentMeta from '@/hooks/useDocumentMeta';
 
 export default function Quote() {
+  useDocumentMeta({
+    title: 'Get an Insurance Quote | Diversified Insurance',
+    description: 'Request a personalized insurance quote from Diversified Insurance. Answer a few questions and a licensed Texas agent will shop the market for you. No obligation.',
+  });
   return (
     <Layout breadcrumb="Get a Quote">
       <section className="pt-28 md:pt-32 pb-10 px-6 md:px-12 bg-gradient-to-b from-muted/60 to-white">

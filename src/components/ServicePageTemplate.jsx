@@ -5,6 +5,7 @@ import { ArrowRight, ChevronRight } from 'lucide-react';
 import Layout from '@/components/Layout';
 import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
+import useDocumentMeta from '@/hooks/useDocumentMeta';
 
 export default function ServicePageTemplate({
   breadcrumb,
@@ -25,7 +26,10 @@ export default function ServicePageTemplate({
   serviceKey,
   calculator,
   heroExtraActions,
+  metaTitle,
+  metaDescription,
 }) {
+  useDocumentMeta({ title: metaTitle, description: metaDescription });
   return (
     <Layout>
       {/* HERO */}

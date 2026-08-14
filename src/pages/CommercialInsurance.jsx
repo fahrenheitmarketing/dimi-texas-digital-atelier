@@ -87,6 +87,8 @@ export default function CommercialInsurance() {
       ctaSubtitle="Let us assess your risks and shop the market for the right coverage. A stronger protection program may cost less than you think — and it's worth everything when you need it."
       ctaImage={CTA_IMG}
       serviceKey="commercial"
+      metaTitle="Commercial Insurance in Texas | Diversified Insurance"
+      metaDescription="Comprehensive Texas business insurance — general liability, commercial auto, property and workers' comp — tailored to your operation from multiple top-rated carriers."
     />
   );
 }

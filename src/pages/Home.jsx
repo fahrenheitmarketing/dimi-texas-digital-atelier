@@ -11,6 +11,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 import CtaBanner from '@/components/CtaBanner';
 import AnimatedStat from '@/components/AnimatedStat';
 import CarrierMarquee from '@/components/CarrierMarquee';
+import useDocumentMeta from '@/hooks/useDocumentMeta';
 
 const HERO_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/cd15e64b2_generated_0dbfa99c.png';
 const HERO_BG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/047293005_Gemini_Generated_Image_lx8q3glx8q3glx8q.png';
@@ -68,6 +69,10 @@ const homeFaqs = [
 
 export default function Home() {
   const navigate = useNavigate();
+  useDocumentMeta({
+    title: 'Diversified Insurance | Independent Insurance Agency in Texas',
+    description: 'Diversified Insurance (DIMI Texas) is an independent agency serving Texas families and businesses with tailored Auto, Home, Life and Commercial coverage. Get a quote.',
+  });
   const [selected, setSelected] = useState('Auto');
   const [zip, setZip] = useState('');
   const [zipError, setZipError] = useState('');

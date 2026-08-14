@@ -5,10 +5,15 @@ import { Image } from '@/components/ui/image';
 import Layout from '@/components/Layout';
 import PolicyUploader from '@/components/quote/PolicyUploader';
 import { base44 } from '@/api/base44Client';
+import useDocumentMeta from '@/hooks/useDocumentMeta';
 
 const CONTACT_IMG = 'https://media.base44.com/images/public/6a738b6cc9947068aaaec25d/fc13724b2_generated_image.png';
 
 export default function Contact() {
+  useDocumentMeta({
+    title: 'Contact Diversified Insurance | Austin, Texas',
+    description: "Talk to a real Texas insurance agent at (512) 292-3650. Questions, quotes or claims — we're here Monday–Friday, 8am–5pm, with 24/7 claims support.",
+  });
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [serverError, setServerError] = useState('');

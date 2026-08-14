@@ -89,6 +89,8 @@ export default function LifeInsurance() {
       ctaSubtitle="The best time to buy life insurance was yesterday. The second-best time is today. Let us find the right coverage at the right price — before you need it."
       ctaImage={CTA_IMG}
       serviceKey="life"
+      metaTitle="Life Insurance in Texas | Diversified Insurance"
+      metaDescription="Term, whole and universal life insurance for Texas families. Calculate your coverage needs and shop top-rated carriers to protect the people who depend on you."
       heroExtraActions={
         <a
           href="https://www.appcelerate.life/dimi-lp"

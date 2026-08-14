@@ -72,6 +72,8 @@ export default function Annuities() {
       ctaSubtitle="Let us shop today's top annuity rates and find a contract that protects your principal and pays you for life. No obligation — just a clear, honest look at your options."
       ctaImage={CTA_IMG}
       serviceKey="annuities"
+      metaTitle="Annuities in Texas | Diversified Insurance"
+      metaDescription="Turn your savings into guaranteed retirement income with Texas annuities — MYGA, fixed indexed and lifetime income options from top-rated carriers. Get a quote."
       calculator={<AnnuitiesIncomeCalculator />}
     />
   );

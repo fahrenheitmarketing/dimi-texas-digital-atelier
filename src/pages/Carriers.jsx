@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import { Phone, Building2, LifeBuoy, AlertTriangle, Headphones } from 'lucide-react';
+import useDocumentMeta from '@/hooks/useDocumentMeta';
 
 const carriers = [
   {
@@ -85,6 +86,10 @@ function iconFor(label) {
 }
 
 export default function Carriers() {
+  useDocumentMeta({
+    title: 'Insurance Carrier Phone Directory | Diversified Insurance',
+    description: "Direct phone numbers for top insurance carriers — claims, roadside assistance and policyholder support. Don't see your carrier? Call us at (512) 292-3650.",
+  });
   const [query, setQuery] = useState('');
   const filtered = carriers.filter((c) =>
     c.name.toLowerCase().includes(query.toLowerCase())

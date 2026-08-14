@@ -87,6 +87,8 @@ export default function OccupationalInsurance() {
       ctaSubtitle="There's only one way to find out. Let us run a free, no-obligation comparison of your current workers' comp premium versus occupational accident coverage. The numbers may surprise you."
       ctaImage={CTA_IMG}
       serviceKey="occupational"
+      metaTitle="Occupational Insurance in Texas | Diversified Insurance"
+      metaDescription="A smart alternative to workers' comp for Texas employers — often 10–50% less with broader flexibility. Occupational accident and group coverage from top carriers."
     />
   );
 }

@@ -78,6 +78,8 @@ export default function AutoInsurance() {
       ctaSubtitle="One conversation, multiple carriers. Let us shop the market and show you what better auto coverage looks like — at a price that respects your budget."
       ctaImage={CTA_IMG}
       serviceKey="auto"
+      metaTitle="Auto Insurance in Texas | Diversified Insurance"
+      metaDescription="Shop top-rated carriers for Texas auto insurance tailored to how you drive. Liability, collision, comprehensive, SR-22 and multi-vehicle discounts. Get a quote."
     />
   );
 }

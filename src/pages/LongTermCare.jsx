@@ -75,6 +75,8 @@ export default function LongTermCare() {
       ctaSubtitle="The best time to plan is while you're still healthy. Let us shop the market and design long-term care coverage that protects your savings and preserves your choices — before you need it."
       ctaImage={CTA_IMG}
       serviceKey="ltc"
+      metaTitle="Long-Term Care Insurance in Texas | Diversified Insurance"
+      metaDescription="Protect your savings and independence with Texas long-term care insurance for home care, assisted living and skilled nursing. Plan before you need it."
     />
   );
 }
