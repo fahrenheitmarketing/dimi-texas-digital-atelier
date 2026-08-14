@@ -249,9 +249,9 @@ export default function Home() {
       <section className="py-12 px-6 md:px-12 bg-brand-navy">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-2xl md:text-3xl text-white font-bold">
+            <h2 className="text-2xl md:text-3xl text-white font-bold">
               Need to file an insurance claim?
-            </h3>
+            </h2>
             <p className="text-white/70 mt-2">
               Just 5–10 minutes and the basic details gets you started.
             </p>

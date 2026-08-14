@@ -18,7 +18,7 @@ export default function Footer() {
 
           {/* Coverage */}
           <div>
-            <h4 className="text-xs font-bold tracking-wide uppercase text-brand-blue-light mb-5">Coverage</h4>
+            <h2 className="text-xs font-bold tracking-wide uppercase text-brand-blue-light mb-5">Coverage</h2>
             <ul className="space-y-3">
               <li><Link to="/auto-insurance" className="text-sm text-white/70 hover:text-brand-red transition-colors">Auto Insurance</Link></li>
               <li><Link to="/home-insurance" className="text-sm text-white/70 hover:text-brand-red transition-colors">Homeowners Insurance</Link></li>
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-xs font-bold tracking-wide uppercase text-brand-blue-light mb-5">Company</h4>
+            <h2 className="text-xs font-bold tracking-wide uppercase text-brand-blue-light mb-5">Company</h2>
             <ul className="space-y-3">
               <li><Link to="/about" className="text-sm text-white/70 hover:text-brand-red transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="text-sm text-white/70 hover:text-brand-red transition-colors">Contact</Link></li>
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xs font-bold tracking-wide uppercase text-brand-blue-light mb-5">Contact</h4>
+            <h2 className="text-xs font-bold tracking-wide uppercase text-brand-blue-light mb-5">Contact</h2>
             <ul className="space-y-4">
               <li>
                 <a href="tel:5122923650" className="flex items-start gap-3 text-white/70 hover:text-brand-red transition-colors">
